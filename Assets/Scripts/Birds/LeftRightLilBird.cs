@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Birds
 {
-    public class LeftRightBrd : Brd
+    public class LeftRightLilBird : LilBird
     {
         protected override void Start()
         {
