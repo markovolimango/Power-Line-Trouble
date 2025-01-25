@@ -3,18 +3,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    private GridManager _gridManager;
     private bool _isStopped;
     private Vector2 _moveDir, _inputDir;
-    private NodeManager _nodeManager;
+    private int _posY, _posX;
     private Rigidbody2D _rigidbody;
-    private int i, j;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _moveDir = Vector2.right;
         _inputDir = Vector2.right;
-        _nodeManager = FindObjectOfType<NodeManager>();
+        _gridManager = FindFirstObjectByType<GridManager>();
     }
 
     private void Update()
@@ -45,17 +45,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!_isStopped)
             return;
-        _moveDir = CalculateMoveDir(_inputDir);
-    }
 
-    private Vector2 CalculateMoveDir(Vector2 dir)
-    {
-        var start = _nodeManager.NodePositions[i, j];
-        if (j + dir.x < 0 || i - dir.y < 0 || j + dir.x >= _nodeManager.n || i - dir.y >= _nodeManager.m)
-            return Vector2.zero;
-        j += (int)dir.x;
-        i -= (int)dir.y;
-        print(i + " " + j);
-        return (_nodeManager.NodePositions[i, j] - start).normalized;
+        var startPos = _gridManager.NodePositions[_posY, _posX];
+        if (_posX + _inputDir.x < 0 || _posY - _inputDir.y < 0 || _posX + _inputDir.x >= _gridManager.n ||
+            _posY - _inputDir.y >= _gridManager.m)
+            _inputDir *= -1;
+        _posX += (int)_inputDir.x;
+        _posY -= (int)_inputDir.y;
+        _moveDir = (_gridManager.NodePositions[_posY, _posX] - startPos).normalized;
     }
 }
