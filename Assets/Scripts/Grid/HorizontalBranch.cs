@@ -1,3 +1,6 @@
-public class HorizontalBranch : BranchPhysics
+namespace Grid
 {
+    public class HorizontalBranch : Branch
+    {
+    }
 }
