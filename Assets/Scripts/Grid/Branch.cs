@@ -5,35 +5,28 @@ namespace Grid
 {
     public abstract class Branch : MonoBehaviour
     {
-        protected LineRenderer _lineRenderer;
+        protected LineRenderer LineRenderer;
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
-
-        protected void Start()
-        {
-            _lineRenderer = GetComponent<LineRenderer>();
-        }
 
         public void SetEdges(Vector2 start, Vector2 end)
         {
-            _lineRenderer = GetComponent<LineRenderer>();
+            LineRenderer = GetComponent<LineRenderer>();
             StartPos = start;
-            _lineRenderer.SetPosition(0, start);
+            LineRenderer.SetPosition(0, start);
             MidPos = (start + end) / 2;
-            _lineRenderer.SetPosition(1, (start + end) / 2);
+            LineRenderer.SetPosition(1, (start + end) / 2);
             EndPos = end;
-            _lineRenderer.SetPosition(2, end);
+            LineRenderer.SetPosition(2, end);
         }
 
-        public void AttachBird()
+        public virtual void AttachBird()
         {
-            MidPos.y -= 0.2f;
-            _lineRenderer.SetPosition(1, MidPos);
+            LineRenderer.SetPosition(1, MidPos);
         }
 
-        public void DetachBird()
+        public virtual void DetachBird()
         {
-            MidPos.y = Math.Min(StartPos.y, MidPos.y + 0.2f);
-            _lineRenderer.SetPosition(1, MidPos);
+            LineRenderer.SetPosition(1, MidPos);
         }
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class DJScript : MonoBehaviour
 {
+    public AudioClip boomClip, tskClip;
     public float beatTime;
     public UnityEvent boom, tsk;
     private AudioSource _audioSource;
@@ -12,6 +13,7 @@ public class DJScript : MonoBehaviour
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _beatTimer = beatTime;
     }
 
     private void FixedUpdate()
@@ -24,11 +26,14 @@ public class DJScript : MonoBehaviour
         {
             if (_isBoom)
             {
+                _audioSource.clip = boomClip;
                 _audioSource.Play();
                 boom.Invoke();
             }
             else
             {
+                _audioSource.clip = tskClip;
+                _audioSource.Play();
                 tsk.Invoke();
             }
 

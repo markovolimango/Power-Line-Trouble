@@ -9,9 +9,9 @@ namespace Grid
         public float distanceX, distanceY, skretanje;
         public GameObject nodePrefab;
         public GameObject horizontalBranchPrefab, verticalBranchPrefab;
-        [NonSerialized] public HorizontalBranch[,] HorizontalBranches;
+        [NonSerialized] public Branch[,] HorizontalBranches;
         [NonSerialized] public Vector2[,] NodePositions;
-        [NonSerialized] public VerticalBranch[,] VerticalBranches;
+        [NonSerialized] public Branch[,] VerticalBranches;
 
         private void Start()
         {
@@ -31,7 +31,7 @@ namespace Grid
                 pos.y -= distanceY;
             }
 
-            HorizontalBranches = new HorizontalBranch[m, n - 1];
+            HorizontalBranches = new Branch[m, n - 1];
             for (var i = 0; i < m; i++)
             for (var j = 0; j < n - 1; j++)
             {
@@ -40,7 +40,7 @@ namespace Grid
                 HorizontalBranches[i, j].SetEdges(NodePositions[i, j], NodePositions[i, j + 1]);
             }
 
-            VerticalBranches = new VerticalBranch[m - 1, n];
+            VerticalBranches = new Branch[m - 1, n];
             for (var j = 0; j < n; j++)
             for (var i = 0; i < m - 1; i++)
             {
