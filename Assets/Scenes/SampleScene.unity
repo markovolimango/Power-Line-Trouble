@@ -148,13 +148,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 376403806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc952a0a5af4434aaeb1674ec615f45, type: 3}
+  m_Script: {fileID: 11500000, guid: befe78e748afe4d44ade34520cb69a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 3
+  spawnTime: 10
   birdPrefabs:
-  - {fileID: 6762048526103935904, guid: 1aea064e4c71bcd49880d03174b9f63a, type: 3}
-  - {fileID: 3763262486387449136, guid: bb00c5ce66f0d8546a441fb40958c2ae, type: 3}
+  - {fileID: 3763262486387449136, guid: f282f9e87627cbf4f93ac57215ecec5c, type: 3}
+  - {fileID: 6762048526103935904, guid: e4857d335331ef341a8824b0efd8b035, type: 3}
 --- !u!4 &376403808
 Transform:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 1.0316666
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 598296987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f59976b5426fc54a94522f6b2ec059b, type: 3}
+  m_Script: {fileID: 11500000, guid: b840506c0a3aaf54ea0bd173a958f2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m: 6
@@ -381,9 +381,9 @@ MonoBehaviour:
   distanceX: 1.375
   distanceY: 1.4
   skretanje: 0.5
-  nodePrefab: {fileID: 4744203986578612912, guid: c128b21614398dd4eb17e87114cb0e54, type: 3}
-  horizontalBranchPrefab: {fileID: 7232953984675164390, guid: f919a327408bf364aa8de2c03bef49a2, type: 3}
-  verticalBranchPrefab: {fileID: 902129358480229986, guid: 0cee1f1f40916ca4386ea57341b6b50f, type: 3}
+  nodePrefab: {fileID: 4744203986578612912, guid: 70048c5f4b8e6d4428620901961f145b, type: 3}
+  horizontalBranchPrefab: {fileID: 7232953984675164390, guid: 136598b9205a80a4e856e3ef185aee39, type: 3}
+  verticalBranchPrefab: {fileID: 902129358480229986, guid: 2718411cda267014692acca0c3a3034d, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,11 +446,7 @@ MonoBehaviour:
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  m_ShapePath: []
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -496,7 +492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 732707846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc84b1b64c0cce8409fd552b291199b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cc8e4c96f18ce04eb864c779e3ed0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
@@ -645,7 +641,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.8814938, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -667,18 +663,14 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 2
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  m_ShapePath: []
 --- !u!1 &873795447
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,11 +698,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 873795447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b9717a6c52974e954f8ca44732220, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fffd9ef86935174caed22663260560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomClip: {fileID: 8300000, guid: 70fbd537d32aec542925591ce4f5d7b5, type: 3}
-  tskClip: {fileID: 8300000, guid: bc8adddfc560c7f46bd51a46dcb1cae9, type: 3}
+  boomClip: {fileID: 8300000, guid: f2dfeb4a509cbc0468b9fccac4e5ead9, type: 3}
+  tskClip: {fileID: 8300000, guid: 7440a44c552964b47baba5926e4f96fe, type: 3}
   beatTime: 0.3
   boom:
     m_PersistentCalls:
