@@ -9,20 +9,19 @@ namespace Birds
 
         protected Vector2Int JumpDir;
 
-        public void OnTsk()
+        public override void OnTsk()
         {
-            print(Branches[Pos.x, Pos.y].name);
-            Branches[Pos.y, Pos.x].DetachBird();
-            Pos += JumpDir;
-            Branches[Pos.y, Pos.x].AttachBird();
-            transform.position = Branches[Pos.y, Pos.x].MidPos + Vector2.up * 0.3f;
+            Branches[pos.y, pos.x].DetachBird();
+            pos += JumpDir;
+            Branches[pos.y, pos.x].AttachBird();
+            transform.position = Branches[pos.y, pos.x].MidPos + Vector2.up * 0.3f;
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
             JumpDir *= -1;
         }
 
         protected override void Die()
         {
-            Branches[Pos.y, Pos.x].DetachBird();
+            Branches[pos.y, pos.x].DetachBird();
             base.Die();
         }
     }

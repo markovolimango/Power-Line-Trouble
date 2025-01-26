@@ -5,8 +5,8 @@ namespace Birds
 {
     public abstract class Bird : MonoBehaviour
     {
+        public Vector2Int pos;
         protected GridManager Grid;
-        protected Vector2Int Pos;
 
         protected virtual void Start()
         {
@@ -18,6 +18,8 @@ namespace Birds
             if (collision.gameObject.CompareTag("Player"))
                 Die();
         }
+
+        public abstract void OnTsk();
 
         protected virtual void Die()
         {
