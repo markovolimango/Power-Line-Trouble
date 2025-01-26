@@ -43,7 +43,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_posX + _inputDir.x < 0 || _posY - _inputDir.y < 0 || _posX + _inputDir.x >= _gridManager.n ||
             _posY - _inputDir.y >= _gridManager.m)
-            _inputDir=Vector2.zero;
+            _inputDir*=-1;
+        if (_inputDir==Vector2.up) _gridManager.VerticalBranches[_posY-1,_posX].KillBirds();
+        if (_inputDir==Vector2.down) _gridManager.VerticalBranches[_posY,_posX].KillBirds(); 
+        if (_inputDir==Vector2.right) _gridManager.HorizontalBranches[_posY,_posX].KillBirds(); 
+        if (_inputDir==Vector2.left) _gridManager.HorizontalBranches[_posY,_posX-1].KillBirds(); 
         _posX += (int)_inputDir.x;
         _posY -= (int)_inputDir.y;
         _rigidbody.position = _gridManager.NodePositions[_posY, _posX];

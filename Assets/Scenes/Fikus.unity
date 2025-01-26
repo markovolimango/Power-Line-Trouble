@@ -712,7 +712,7 @@ MonoBehaviour:
   boomClip: {fileID: 8300000, guid: 70fbd537d32aec542925591ce4f5d7b5, type: 3}
   tskClip: {fileID: 8300000, guid: bc8adddfc560c7f46bd51a46dcb1cae9, type: 3}
   musicClip: {fileID: 8300000, guid: aaf1d43ce3abaf94fb9ad3bfba7487c6, type: 3}
-  beatTime: 0.2
+  beatTime: 0.1
   boom:
     m_PersistentCalls:
       m_Calls:

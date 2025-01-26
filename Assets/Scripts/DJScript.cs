@@ -9,18 +9,19 @@ public class DJScript : MonoBehaviour
 {
     public AudioClip boomClip, tskClip, musicClip;
     public float beatTime;
+    public int tskFrequency;
     public UnityEvent boom, tsk;
     private AudioSource _audioSource;
-    private float _beatTimer;
     private bool _isBoom;
     private Animator _animator;
+    private int _tskTimer;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _beatTimer = beatTime;
         _isBoom = true;
         StartCoroutine(TimePassed());
+        _tskTimer=tskFrequency;
     }
 
     private void PlayMusic()
@@ -45,12 +46,20 @@ public class DJScript : MonoBehaviour
             }
             else
             {
-                //_audioSource.clip = tskClip;
-                //_audioSource.Play();
-                //print("TSK");
-                tsk.Invoke();
+                if (_tskTimer == 1)
+                {
+                    //_audioSource.clip = tskClip;
+                    //_audioSource.Play();
+                    print("TSK");
+                    tsk.Invoke();
+                    _tskTimer = tskFrequency;
+                }
+                else
+                {
+                    _tskTimer--;
+                }
             }
-
+            
             _isBoom = !_isBoom;
         }
     }

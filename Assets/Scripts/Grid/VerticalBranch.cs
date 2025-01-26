@@ -1,3 +1,4 @@
+using Birds;
 using UnityEngine;
 
 namespace Grid
@@ -12,17 +13,17 @@ namespace Grid
             _perpendicular = new Vector2(-_dir.y, _dir.x);
         }
 
-        public override void AttachBird()
+        public override void AttachBird(Bird bird)
         {
             MidPos -= _perpendicular * 0.2f;
-            base.AttachBird();
+            base.AttachBird(bird);
         }
 
-        public override void DetachBird()
+        public override void DetachBird(Bird bird)
         {
             if (MidPos == (StartPos + EndPos) / 2) return;
             MidPos += _perpendicular * 0.2f;
-            base.DetachBird();
+            base.DetachBird(bird);
         }
     }
 }
