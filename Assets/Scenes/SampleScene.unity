@@ -151,8 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befe78e748afe4d44ade34520cb69a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 0
-  birdPrefabs: []
+  spawnTime: 10
+  birdPrefabs:
+  - {fileID: 3763262486387449136, guid: f282f9e87627cbf4f93ac57215ecec5c, type: 3}
+  - {fileID: 6762048526103935904, guid: e4857d335331ef341a8824b0efd8b035, type: 3}
 --- !u!4 &376403808
 Transform:
   m_ObjectHideFlags: 0
@@ -319,11 +321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 100
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_AssetsPPU: 40
+  m_RefResolutionX: 640
+  m_RefResolutionY: 360
   m_CropFrame: 0
-  m_GridSnapping: 0
+  m_GridSnapping: 1
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
@@ -371,9 +373,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 598296987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d4bd242523542859892ef50fc3d5eb, type: 3}
+  m_Script: {fileID: 11500000, guid: b840506c0a3aaf54ea0bd173a958f2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m: 6
+  n: 9
+  distanceX: 1.375
+  distanceY: 1.4
+  skretanje: 0.5
+  nodePrefab: {fileID: 4744203986578612912, guid: 70048c5f4b8e6d4428620901961f145b, type: 3}
+  horizontalBranchPrefab: {fileID: 7232953984675164390, guid: 136598b9205a80a4e856e3ef185aee39, type: 3}
+  verticalBranchPrefab: {fileID: 902129358480229986, guid: 2718411cda267014692acca0c3a3034d, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,11 +414,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 3
+  m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -482,9 +492,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 732707846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df0e6889b80bd4e8db2c1df4e49efa52, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cc8e4c96f18ce04eb864c779e3ed0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 15
 --- !u!58 &732707848
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -690,15 +701,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fffd9ef86935174caed22663260560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomClip: {fileID: 0}
-  tskClip: {fileID: 0}
-  beatTime: 0
+  boomClip: {fileID: 8300000, guid: f2dfeb4a509cbc0468b9fccac4e5ead9, type: 3}
+  tskClip: {fileID: 8300000, guid: 7440a44c552964b47baba5926e4f96fe, type: 3}
+  beatTime: 0.3
   boom:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 732707847}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnBoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   tsk:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 376403807}
+        m_TargetAssemblyTypeName: Birds.Spawner, Assembly-CSharp
+        m_MethodName: OnTsk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &873795449
 Transform:
   m_ObjectHideFlags: 0
