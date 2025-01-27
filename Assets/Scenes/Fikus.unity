@@ -148,13 +148,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 376403806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc952a0a5af4434aaeb1674ec615f45, type: 3}
+  m_Script: {fileID: 11500000, guid: f1c5d261a9487458eadf78ff2552f06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 2
+  spawnTime: 4
   birdPrefabs:
-  - {fileID: 6762048526103935904, guid: 1aea064e4c71bcd49880d03174b9f63a, type: 3}
-  - {fileID: 3763262486387449136, guid: bb00c5ce66f0d8546a441fb40958c2ae, type: 3}
+  - {fileID: 6762048526103935904, guid: bde80f0623e034e0bb3f2f2ed68bd6f6, type: 3}
+  - {fileID: 3763262486387449136, guid: b3f7072050d7d4652b75e156e72124c7, type: 3}
 --- !u!4 &376403808
 Transform:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 598296987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f59976b5426fc54a94522f6b2ec059b, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d4bd242523542859892ef50fc3d5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m: 6
@@ -381,9 +381,9 @@ MonoBehaviour:
   distanceX: 1.375
   distanceY: 1.4
   skretanje: 0.5
-  nodePrefab: {fileID: 4744203986578612912, guid: c128b21614398dd4eb17e87114cb0e54, type: 3}
-  horizontalBranchPrefab: {fileID: 7232953984675164390, guid: f919a327408bf364aa8de2c03bef49a2, type: 3}
-  verticalBranchPrefab: {fileID: 902129358480229986, guid: 0cee1f1f40916ca4386ea57341b6b50f, type: 3}
+  nodePrefab: {fileID: 4744203986578612912, guid: df990e091d22d476aa7fb376d76e1b38, type: 3}
+  horizontalBranchPrefab: {fileID: 7232953984675164390, guid: 9e3f7a71ebbdb42568b567eadf6d527e, type: 3}
+  verticalBranchPrefab: {fileID: 902129358480229986, guid: 9e080ef61710a4d2b873824dcf8411fa, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 732707846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc84b1b64c0cce8409fd552b291199b6, type: 3}
+  m_Script: {fileID: 11500000, guid: df0e6889b80bd4e8db2c1df4e49efa52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &732707848
@@ -706,12 +706,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 873795447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b9717a6c52974e954f8ca44732220, type: 3}
+  m_Script: {fileID: 11500000, guid: de5619096e0cd42b38c4d0e7c5467ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boomClip: {fileID: 8300000, guid: 70fbd537d32aec542925591ce4f5d7b5, type: 3}
-  tskClip: {fileID: 8300000, guid: bc8adddfc560c7f46bd51a46dcb1cae9, type: 3}
-  musicClip: {fileID: 8300000, guid: aaf1d43ce3abaf94fb9ad3bfba7487c6, type: 3}
+  boomClip: {fileID: 8300000, guid: 7a3388330c3674e15a23fadf8a72479d, type: 3}
+  tskClip: {fileID: 8300000, guid: 96135e93344d045638bb8cd8ec8aeb02, type: 3}
+  musicClip: {fileID: 8300000, guid: 9e73f342f87344580a3d06e9ca4e4785, type: 3}
   beatTime: 0.2
   tskFrequency: 1
   boom:

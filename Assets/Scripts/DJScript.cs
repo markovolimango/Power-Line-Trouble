@@ -1,9 +1,6 @@
-using System.Diagnostics;
-using System.Runtime.InteropServices;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections;
-using System.Collections.Generic;
 
 public class DJScript : MonoBehaviour
 {
@@ -11,9 +8,9 @@ public class DJScript : MonoBehaviour
     public float beatTime;
     public int tskFrequency;
     public UnityEvent boom, tsk;
+    private Animator _animator;
     private AudioSource _audioSource;
     private bool _isBoom;
-    private Animator _animator;
     private int _tskTimer;
 
     private void Start()
@@ -21,7 +18,7 @@ public class DJScript : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _isBoom = true;
         StartCoroutine(TimePassed());
-        _tskTimer=tskFrequency;
+        _tskTimer = tskFrequency;
     }
 
     private void PlayMusic()
@@ -29,8 +26,8 @@ public class DJScript : MonoBehaviour
         _audioSource.clip = musicClip;
         _audioSource.Play();
     }
-    
-    IEnumerator TimePassed()
+
+    private IEnumerator TimePassed()
     {
         PlayMusic();
         yield return new WaitForSeconds(beatTime);
@@ -59,7 +56,7 @@ public class DJScript : MonoBehaviour
                     _tskTimer--;
                 }
             }
-            
+
             _isBoom = !_isBoom;
         }
     }
