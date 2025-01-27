@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc952a0a5af4434aaeb1674ec615f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 3
+  spawnTime: 2
   birdPrefabs:
   - {fileID: 6762048526103935904, guid: 1aea064e4c71bcd49880d03174b9f63a, type: 3}
   - {fileID: 3763262486387449136, guid: bb00c5ce66f0d8546a441fb40958c2ae, type: 3}
@@ -252,7 +252,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.14711641, g: 0.2647907, b: 0.5471698, a: 0}
+  m_BackGroundColor: {r: 0.9339623, g: 0.77999645, b: 0.629984, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -712,7 +712,8 @@ MonoBehaviour:
   boomClip: {fileID: 8300000, guid: 70fbd537d32aec542925591ce4f5d7b5, type: 3}
   tskClip: {fileID: 8300000, guid: bc8adddfc560c7f46bd51a46dcb1cae9, type: 3}
   musicClip: {fileID: 8300000, guid: aaf1d43ce3abaf94fb9ad3bfba7487c6, type: 3}
-  beatTime: 0.1
+  beatTime: 0.2
+  tskFrequency: 1
   boom:
     m_PersistentCalls:
       m_Calls:

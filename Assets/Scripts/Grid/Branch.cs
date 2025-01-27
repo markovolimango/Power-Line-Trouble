@@ -3,6 +3,7 @@ using System.ComponentModel;
 using UnityEngine;
 using Birds;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 
 namespace Grid
@@ -32,17 +33,18 @@ namespace Grid
 
         public virtual void DetachBird(Bird bird)
         {
+            print(bird);
             Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
         }
 
         public void KillBirds()
         {
-            for (int i = 0; i < Birds.Count; i++)
+            print("KILLING");
+            foreach (var bird in Birds.ToList())
             {
-                Birds[i].Die();
+                bird.Die();
             }
-            Birds.Clear();
         }
     }
 }
