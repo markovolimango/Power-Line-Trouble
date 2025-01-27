@@ -14,7 +14,6 @@ namespace Birds
             Branches[pos.y, pos.x].DetachBird(this);
             pos += JumpDir;
             Branches[pos.y, pos.x].AttachBird(this);
-            transform.position = Branches[pos.y, pos.x].MidPos + Vector2.up * 0.3f;
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
             JumpDir *= -1;
         }

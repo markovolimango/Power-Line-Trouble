@@ -13,11 +13,6 @@ namespace Birds
             Grid = FindFirstObjectByType<GridManager>();
         }
 
-        protected void OnCollisionEnter2D(Collision2D collision)
-        {
-            
-        }
-
         public abstract void OnTsk();
 
         public virtual void Die()

@@ -150,3 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b68ba362e6a45ef990c7cdb3c51db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceBetweenBirds: 0.2
