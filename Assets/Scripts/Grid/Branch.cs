@@ -36,7 +36,7 @@ namespace Grid
         {
             if (MidPos != (StartPos + EndPos) / 2)
                 MidPos.y += 0.2f;
-            print(bird);
+            //print(bird);
             Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
             ArrangeBirds();
@@ -44,7 +44,7 @@ namespace Grid
 
         public void KillBirds()
         {
-            print("KILLING");
+            //print("KILLING");
             foreach (var bird in Birds.ToList()) bird.Die();
         }
 

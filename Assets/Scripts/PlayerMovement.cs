@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     private bool _isStopped;
     private int _posY, _posX;
     private Rigidbody2D _rigidbody;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _inputDir = Vector2.zero;
         _grid = FindFirstObjectByType<GridManager>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -40,5 +42,6 @@ public class PlayerMovement : MonoBehaviour
         _posX += (int)_inputDir.x;
         _posY -= (int)_inputDir.y;
         _rigidbody.position = _grid.NodePositions[_posY, _posX];
+        _audioSource.Play();
     }
 }
