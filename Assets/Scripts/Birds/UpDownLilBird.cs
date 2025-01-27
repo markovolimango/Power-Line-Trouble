@@ -19,7 +19,6 @@ namespace Birds
             HorizontalBranches[pos.y, pos.x].AttachBird(this);
             transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
             JumpDir *= -1;
-            base.Start();
         }
         
         public override void Die()
