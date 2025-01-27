@@ -15,13 +15,12 @@ namespace Birds
 
         protected void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
-                Die();
+            
         }
 
         public abstract void OnTsk();
 
-        protected virtual void Die()
+        public virtual void Die()
         {
             Destroy(gameObject);
         }

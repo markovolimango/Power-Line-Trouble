@@ -1,19 +1,20 @@
 using System;
+using Birds;
 
 namespace Grid
 {
     public class HorizontalBranch : Branch
     {
-        public override void AttachBird()
+        public override void AttachBird(Bird bird)
         {
             MidPos.y -= 0.2f;
-            base.AttachBird();
+            base.AttachBird(bird);
         }
 
-        public override void DetachBird()
+        public override void DetachBird(Bird bird)
         {
             MidPos.y = Math.Min(StartPos.y, MidPos.y + 0.2f);
-            base.AttachBird();
+            base.DetachBird(bird);
         }
     }
 }
