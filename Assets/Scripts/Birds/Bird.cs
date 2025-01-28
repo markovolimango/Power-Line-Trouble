@@ -42,22 +42,22 @@ namespace Birds
             }
             if (IsOnHorizontal==1)
             {
-                HorizontalBranches[newPos.y, newPos.x].AttachBird(this);
                 endPos = HorizontalBranches[newPos.y, newPos.x].MidPos;
             }
             else if (IsOnHorizontal==0)
             {
-                VerticalBranches[newPos.y, newPos.x].AttachBird(this);
                 endPos = VerticalBranches[newPos.y, newPos.x].MidPos;
             }
 
             MoveInSmoothSlurpeLine(startPos, endPos, 0.5f, 0.2f);
             if (IsOnHorizontal==1)
             {
+                HorizontalBranches[newPos.y, newPos.x].AttachBird(this);
                 if(pos!=new Vector2Int(-1,-1)) HorizontalBranches[pos.y, pos.x].DetachBird(this);
             }
             else if (IsOnHorizontal==0)
             {
+                VerticalBranches[newPos.y, newPos.x].AttachBird(this);
                 if(pos!=new Vector2Int(-1,-1)) VerticalBranches[pos.y, pos.x].DetachBird(this);
             }
 

@@ -31,7 +31,7 @@ namespace Grid
             MidPos.y -= 0.2f;
             Birds.Add(bird);
             LineRenderer.SetPosition(1, MidPos);
-            //ArrangeBirds();
+            ArrangeBirds();
         }
 
         public void DetachBird(Bird bird)
@@ -41,7 +41,7 @@ namespace Grid
             //print("Detached");
             Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
-            //ArrangeBirds();
+            ArrangeBirds();
         }
 
         public void KillBirds()
