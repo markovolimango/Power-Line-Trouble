@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Grid
@@ -26,6 +27,7 @@ namespace Grid
 
         public virtual void AttachBird(Bird bird)
         {
+            print("BordAttached");
             MidPos.y -= 0.2f;
             Birds.Add(bird);
             LineRenderer.SetPosition(1, MidPos);
@@ -36,7 +38,7 @@ namespace Grid
         {
             if (MidPos != (StartPos + EndPos) / 2)
                 MidPos.y += 0.2f;
-            //print(bird);
+            print("Detached");
             Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
             ArrangeBirds();
@@ -45,7 +47,7 @@ namespace Grid
         public void KillBirds()
         {
             //print("KILLING");
-            foreach (var bird in Birds.ToList()) bird.Die();
+            foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 
         protected abstract void ArrangeBirds();

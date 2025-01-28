@@ -10,7 +10,6 @@ namespace Birds
             IsOnHorizontal= 1;
             base.Start();
             JumpDir = Vector2Int.up;
-            HorizontalBranches[pos.y, pos.x].AttachBird(this);
         }
         
         public override void OnTsk()

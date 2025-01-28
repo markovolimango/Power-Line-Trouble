@@ -53,7 +53,7 @@ public class DJScript : MonoBehaviour
             {
                 //_audioSource.clip = boomClip;
                 //_audioSource.Play();
-                print("BOOM");
+                //print("BOOM");
                 boom.Invoke();
             }
             else
@@ -62,7 +62,7 @@ public class DJScript : MonoBehaviour
                 {
                     //_audioSource.clip = tskClip;
                     //_audioSource.Play();
-                    print("TSK");
+                    //print("TSK");
                     tsk.Invoke();
                     _tskTimer = tskFrequency;
                 }
