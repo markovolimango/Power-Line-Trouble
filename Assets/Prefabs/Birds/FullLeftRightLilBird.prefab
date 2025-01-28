@@ -133,4 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cad05879a27466a979d7502fc148943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpHeightFactor: 0.8
+  jumpDuration: 0.15
   pos: {x: 0, y: 0}

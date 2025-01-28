@@ -15,9 +15,7 @@ namespace Birds
         public override void OnTsk()
         {
             HorizontalBranches[pos.y, pos.x].DetachBird(this);
-            pos += JumpDir;
-            HorizontalBranches[pos.y, pos.x].AttachBird(this);
-            transform.position = new Vector3(transform.position.x, transform.position.y, -0.5f);
+            MoveBirdToPos(pos+JumpDir);
             if(pos.y==0 || pos.y==Grid.m-1) JumpDir *= -1;
         }
         
