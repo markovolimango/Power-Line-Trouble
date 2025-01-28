@@ -1,14 +1,20 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Birds;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Grid
 {
     public abstract class Branch : MonoBehaviour
     {
+        public float spaceBetweenBirds;
+        [NonSerialized] protected List<Bird> Birds = new();
         protected LineRenderer LineRenderer;
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
 
-        public void SetEdges(Vector2 start, Vector2 end)
+        public virtual void SetEdges(Vector2 start, Vector2 end)
         {
             LineRenderer = GetComponent<LineRenderer>();
             StartPos = start;
@@ -19,14 +25,31 @@ namespace Grid
             LineRenderer.SetPosition(2, end);
         }
 
-        public virtual void AttachBird()
+        public virtual void AttachBird(Bird bird)
         {
+            print("BordAttached");
+            MidPos.y -= 0.2f;
+            Birds.Add(bird);
             LineRenderer.SetPosition(1, MidPos);
+            ArrangeBirds();
         }
 
-        public virtual void DetachBird()
+        public void DetachBird(Bird bird)
         {
+            if (MidPos != (StartPos + EndPos) / 2)
+                MidPos.y += 0.2f;
+            print("Detached");
+            Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
+            ArrangeBirds();
         }
+
+        public void KillBirds()
+        {
+            //print("KILLING");
+            foreach (var bird in Birds.ToList()) bird.GetHit();
+        }
+
+        protected abstract void ArrangeBirds();
     }
 }

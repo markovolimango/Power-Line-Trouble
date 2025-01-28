@@ -1,19 +1,21 @@
-using System;
+using UnityEngine;
 
 namespace Grid
 {
     public class HorizontalBranch : Branch
     {
-        public override void AttachBird()
+        protected override void ArrangeBirds()
         {
-            MidPos.y -= 0.2f;
-            base.AttachBird();
-        }
-
-        public override void DetachBird()
-        {
-            MidPos.y = Math.Min(StartPos.y, MidPos.y + 0.2f);
-            base.AttachBird();
+            var dir = -(EndPos - MidPos).normalized;
+            var offset = (Birds.Count - 1) * spaceBetweenBirds * dir / 2;
+            foreach (var bird in Birds)
+            {
+                bird.transform.position =
+                    new Vector3(MidPos.x - offset.x, MidPos.y - offset.y, bird.transform.position.z);
+                if (offset.x >= 0)
+                    dir = -(MidPos - StartPos).normalized;
+                offset -= spaceBetweenBirds * dir;
+            }
         }
     }
 }

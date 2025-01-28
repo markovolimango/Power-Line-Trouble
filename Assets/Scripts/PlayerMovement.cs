@@ -3,56 +3,45 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed;
-    private GridManager _gridManager;
+    private GridManager _grid;
+    private Vector2 _inputDir;
     private bool _isStopped;
-    private Vector2 _moveDir, _inputDir;
     private int _posY, _posX;
     private Rigidbody2D _rigidbody;
+    private AudioSource _audioSource;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _moveDir = Vector2.right;
-        _inputDir = Vector2.right;
-        _gridManager = FindFirstObjectByType<GridManager>();
+        _inputDir = Vector2.zero;
+        _grid = FindFirstObjectByType<GridManager>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             _inputDir = Vector2.up;
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             _inputDir = Vector2.down;
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             _inputDir = Vector2.left;
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             _inputDir = Vector2.right;
-    }
-
-    private void FixedUpdate()
-    {
-        _rigidbody.velocity = _moveDir * moveSpeed;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        _isStopped = true;
-        _moveDir = Vector2.zero;
-        _rigidbody.MovePosition(other.transform.position);
     }
 
     public void OnBoom()
     {
-        if (!_isStopped)
-            return;
-
-        var startPos = _gridManager.NodePositions[_posY, _posX];
-        if (_posX + _inputDir.x < 0 || _posY - _inputDir.y < 0 || _posX + _inputDir.x >= _gridManager.n ||
-            _posY - _inputDir.y >= _gridManager.m)
+        if (_posX + _inputDir.x < 0 || _posY - _inputDir.y < 0 || _posX + _inputDir.x >= _grid.n ||
+            _posY - _inputDir.y >= _grid.m)
             _inputDir *= -1;
+        if (_inputDir == Vector2.up) _grid.VerticalBranches[_posY - 1, _posX].KillBirds();
+        if (_inputDir == Vector2.down) _grid.VerticalBranches[_posY, _posX].KillBirds();
+        if (_inputDir == Vector2.right) _grid.HorizontalBranches[_posY, _posX].KillBirds();
+        if (_inputDir == Vector2.left) _grid.HorizontalBranches[_posY, _posX - 1].KillBirds();
         _posX += (int)_inputDir.x;
         _posY -= (int)_inputDir.y;
-        _moveDir = (_gridManager.NodePositions[_posY, _posX] - startPos).normalized;
+        _rigidbody.position = _grid.NodePositions[_posY, _posX];
+        _audioSource.Play();
     }
 }

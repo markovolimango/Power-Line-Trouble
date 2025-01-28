@@ -4,25 +4,18 @@ namespace Grid
 {
     public class VerticalBranch : Branch
     {
-        private Vector2 _dir, _perpendicular;
-
-        private void Start()
+        protected override void ArrangeBirds()
         {
-            _dir = (StartPos - EndPos).normalized;
-            _perpendicular = new Vector2(-_dir.y, _dir.x);
-        }
-
-        public override void AttachBird()
-        {
-            MidPos -= _perpendicular * 0.2f;
-            base.AttachBird();
-        }
-
-        public override void DetachBird()
-        {
-            if (MidPos == (StartPos + EndPos) / 2) return;
-            MidPos += _perpendicular * 0.2f;
-            base.DetachBird();
+            var dir = -(EndPos - MidPos).normalized;
+            var offset = (Birds.Count - 1) * spaceBetweenBirds * dir / 2;
+            foreach (var bird in Birds)
+            {
+                bird.transform.position =
+                    new Vector3(MidPos.x - offset.x, MidPos.y - offset.y, bird.transform.position.z);
+                if (offset.x <= 0)
+                    dir = -(MidPos - StartPos).normalized;
+                offset -= spaceBetweenBirds * dir;
+            }
         }
     }
 }
