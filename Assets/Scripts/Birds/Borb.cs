@@ -14,7 +14,6 @@ namespace Birds
         public override void GetHit()
         {
             base.GetHit();
-            print(JustDied);
             if (!JustDied)
             {
                 IsOnHorizontal = -1;

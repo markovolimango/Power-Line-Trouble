@@ -43,6 +43,8 @@ namespace Birds
             {
                 VerticalBranches[newPos.y, newPos.x].AttachBird(this);
             }
+
+            pos = newPos;
         }
         
 
@@ -72,7 +74,6 @@ namespace Birds
         public virtual void Die()
         {
             JustDied = true;
-            print(JustDied);
             Destroy(gameObject);
         }
     }

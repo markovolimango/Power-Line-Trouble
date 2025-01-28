@@ -27,7 +27,7 @@ namespace Grid
 
         public virtual void AttachBird(Bird bird)
         {
-            print("BordAttached");
+           //print("BordAttached");
             MidPos.y -= 0.2f;
             Birds.Add(bird);
             LineRenderer.SetPosition(1, MidPos);
@@ -38,7 +38,7 @@ namespace Grid
         {
             if (MidPos != (StartPos + EndPos) / 2)
                 MidPos.y += 0.2f;
-            print("Detached");
+            //print("Detached");
             Birds.Remove(bird);
             LineRenderer.SetPosition(1, MidPos);
             ArrangeBirds();
