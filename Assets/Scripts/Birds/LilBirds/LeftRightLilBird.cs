@@ -13,14 +13,8 @@ namespace Birds
 
         public override void OnTsk()
         {
-            MoveBirdToPos(pos+JumpDir);
+            MoveBirdToPos(pos + JumpDir);
             JumpDir *= -1;
         }
-
-        protected override void Die()
-        {
-            base.Die();
-        }
-        
     }
 }

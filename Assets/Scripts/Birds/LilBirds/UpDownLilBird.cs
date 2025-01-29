@@ -6,20 +6,15 @@ namespace Birds
     {
         protected override void Start()
         {
-            IsOnHorizontal= 1;
+            IsOnHorizontal = 1;
             base.Start();
             JumpDir = Vector2Int.up;
         }
-        
+
         public override void OnTsk()
         {
-            MoveBirdToPos(pos+JumpDir);
+            MoveBirdToPos(pos + JumpDir);
             JumpDir *= -1;
-        }
-
-        protected override void Die()
-        {
-            base.Die();
         }
     }
 }

@@ -124,10 +124,15 @@ namespace Birds
             if (Health <= 0) Die();
         }
 
-        protected virtual void Die()
+        public virtual void Die()
         {
             JustDied = true;
             Destroy(gameObject);
+        }
+
+        protected bool IsInBounds(Vector2 pos)
+        {
+            return pos.x >= 0 && pos.x < Grid.n && pos.y >= 0 && pos.y < Grid.m;
         }
     }
 }
