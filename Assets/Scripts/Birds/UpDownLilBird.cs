@@ -6,9 +6,22 @@ namespace Birds
     {
         protected override void Start()
         {
+            IsOnHorizontal= 1;
             base.Start();
             JumpDir = Vector2Int.up;
-            Branches = Grid.HorizontalBranches;
+        }
+        
+        public override void OnTsk()
+        {
+            HorizontalBranches[pos.y, pos.x].DetachBird(this);
+            MoveBirdToPos(pos+JumpDir);
+            JumpDir *= -1;
+        }
+        
+        public override void Die()
+        {
+            HorizontalBranches[pos.y, pos.x].DetachBird(this);
+            base.Die();
         }
     }
 }
