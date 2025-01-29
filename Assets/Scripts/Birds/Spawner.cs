@@ -33,6 +33,7 @@ namespace Birds
             var bird = Instantiate(birdPrefabs[i], transform);
 
             _dj.tsk.AddListener(bird.GetComponent<Bird>().OnTsk);
+            _dj.boom.AddListener(bird.GetComponent<Bird>().OnBoom);
             bird.GetComponent<Bird>().pos = spawnPos;
 
             _spawnTimer = spawnTime;

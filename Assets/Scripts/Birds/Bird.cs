@@ -6,9 +6,12 @@ namespace Birds
 {
     public abstract class Bird : MonoBehaviour
     {
+        public GameObject shit;
+        public int shitTime;
         public float jumpHeightFactor;
         public float jumpDuration;
         public Vector2Int pos;
+        private int _shitTimer;
         protected GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
@@ -22,6 +25,7 @@ namespace Birds
             HorizontalBranches = Grid.HorizontalBranches;
             VerticalBranches = Grid.VerticalBranches;
             var startingPos = pos;
+            _shitTimer = shitTime;
             pos = new Vector2Int(-1, -1);
             MoveBirdToPos(startingPos);
         }
@@ -95,6 +99,18 @@ namespace Birds
 
         public virtual void OnTsk()
         {
+        }
+
+        public void OnBoom()
+        {
+            if (_shitTimer > 0)
+            {
+                _shitTimer--;
+                return;
+            }
+
+            Instantiate(shit, new Vector3(transform.position.x, transform.position.y, 10f), transform.rotation);
+            _shitTimer = shitTime;
         }
 
 
