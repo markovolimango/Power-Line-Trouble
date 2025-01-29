@@ -14,14 +14,12 @@ namespace Birds
         }
         public override void OnTsk()
         {
-            VerticalBranches[pos.y, pos.x].DetachBird(this);
             MoveBirdToPos(pos+JumpDir);
             if(pos.x==0 || pos.x==Grid.n-1) JumpDir *= -1;
         }
         
         public override void Die()
         {
-            VerticalBranches[pos.y, pos.x].DetachBird(this);
             base.Die();
         }
     }
