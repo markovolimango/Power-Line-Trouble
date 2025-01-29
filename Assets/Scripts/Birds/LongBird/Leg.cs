@@ -1,22 +1,44 @@
+using System;
+using Grid;
 using UnityEngine;
 
 namespace Birds
 {
     public class Leg : Bird
     {
-        private Vector2Int _jumpDir;
+        private Branch[,] _branches;
         private LongBird _longBird;
+        [NonSerialized] public Vector2Int JumpDir;
+        [NonSerialized] public Vector2Int TargetPos;
 
         protected override void Start()
         {
             _longBird = transform.parent.GetComponent<LongBird>();
             base.Start();
+            _branches = IsOnHorizontal == 1 ? HorizontalBranches : VerticalBranches;
         }
 
         public override void GetHit()
         {
-            if (!IsInBounds(pos + _jumpDir)) _longBird.Die();
-            MoveBirdToPos(pos + _jumpDir);
+            TargetPos = pos + 2 * JumpDir;
+            if (TargetPos.x < 0 || TargetPos.x >= Grid.n || TargetPos.y < 0 || TargetPos.y >= Grid.m)
+            {
+                TargetPos = pos + JumpDir;
+                if (TargetPos.x < 0 || TargetPos.x >= Grid.n || TargetPos.y < 0 || TargetPos.y >= Grid.m)
+                {
+                    _branches[pos.y, pos.x].DetachBird(this);
+                    _longBird.Die();
+                    return;
+                }
+
+                _branches[pos.y, pos.x].DetachBird(this);
+                transform.position += Vector3.down + Vector3.right * JumpDir.x;
+                _longBird.SwapLegs();
+                return;
+            }
+
+            MoveBirdToPos(TargetPos);
+            _longBird.SwapLegs();
         }
     }
 }

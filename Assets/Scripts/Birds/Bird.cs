@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using Grid;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Birds
 {
@@ -15,7 +17,7 @@ namespace Birds
         protected GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
-        protected int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
+        [NonSerialized] public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
         protected bool JustDied;
         protected Branch[,] VerticalBranches;
 
@@ -51,11 +53,13 @@ namespace Birds
             {
                 if (pos != new Vector2Int(-1, -1)) HorizontalBranches[pos.y, pos.x].DetachBird(this);
                 HorizontalBranches[newPos.y, newPos.x].AttachBird(this);
+                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
             }
             else if (IsOnHorizontal == 0)
             {
                 if (pos != new Vector2Int(-1, -1)) VerticalBranches[pos.y, pos.x].DetachBird(this);
                 VerticalBranches[newPos.y, newPos.x].AttachBird(this);
+                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
             }
 
             pos = newPos;
@@ -128,11 +132,6 @@ namespace Birds
         {
             JustDied = true;
             Destroy(gameObject);
-        }
-
-        protected bool IsInBounds(Vector2 pos)
-        {
-            return pos.x >= 0 && pos.x < Grid.n && pos.y >= 0 && pos.y < Grid.m;
         }
     }
 }
