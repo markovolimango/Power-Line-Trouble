@@ -33,6 +33,7 @@ namespace Birds
 
         private void FixedUpdate()
         {
+            if (JustDied) return;
             transform.position = (_leftLeg.transform.position + _rightLeg.transform.position) / 2;
         }
 
@@ -49,9 +50,10 @@ namespace Birds
 
         public override void Die()
         {
+            JustDied = true;
             _leftLeg.Die();
             _rightLeg.Die();
-            base.Die();
+            Destroy(gameObject);
         }
     }
 }

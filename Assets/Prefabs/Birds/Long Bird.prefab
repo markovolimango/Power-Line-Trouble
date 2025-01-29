@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6734281588157620816}
   - component: {fileID: 8691878236805096774}
   - component: {fileID: 1581412479961201289}
+  - component: {fileID: 3322630079160587954}
   m_Layer: 0
   m_Name: Right Leg
   m_TagString: Untagged
@@ -102,6 +103,36 @@ MonoBehaviour:
   jumpHeightFactor: -1
   jumpDuration: 0.35
   pos: {x: 0, y: 0}
+  birdHit:
+    m_PersistentCalls:
+      m_Calls: []
+  IsOnHorizontal: -1
+  leftIdleAnimation: {fileID: 4718680579812155758, guid: ae97471bd8a0f4047a0d2743575ebe57, type: 3}
+  rightIdleAnimation: {fileID: -9164448148390486437, guid: 9a6c543e0770af44f89bd41743a7c5b3, type: 3}
+  leftFlyingAnimation: {fileID: 556174395091560440, guid: bad782cfb8f874333b01ca0e9b9e08d5, type: 3}
+  rightFlyingAnimation: {fileID: 7400000, guid: 92c045879f8ef1840afd7ed948bdb8e9, type: 2}
+  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+--- !u!95 &3322630079160587954
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700983681740188773}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27029251984de0e41bde6b1ed5078db9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4625518605915070432
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +144,7 @@ GameObject:
   - component: {fileID: 5193813002217522690}
   - component: {fileID: 1956370400658659352}
   - component: {fileID: 8444097132766344747}
+  - component: {fileID: 8668982076249371037}
   m_Layer: 0
   m_Name: Long Bird
   m_TagString: Untagged
@@ -206,6 +238,36 @@ MonoBehaviour:
   jumpHeightFactor: 1
   jumpDuration: 0.35
   pos: {x: 3, y: 3}
+  birdHit:
+    m_PersistentCalls:
+      m_Calls: []
+  IsOnHorizontal: -1
+  leftIdleAnimation: {fileID: 8315261401881103022, guid: 6241dba45d01a48aca00ba37151988b0, type: 3}
+  rightIdleAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  rightFlyingAnimation: {fileID: 7400000, guid: 61e43fd43ac2ab24b9fdcc30f9f5074e, type: 2}
+  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+--- !u!95 &8668982076249371037
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625518605915070432}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27029251984de0e41bde6b1ed5078db9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6306322821044360193
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +279,7 @@ GameObject:
   - component: {fileID: 956137884326416954}
   - component: {fileID: 8403480502051996592}
   - component: {fileID: 1425117198473365706}
+  - component: {fileID: 7682119240637697557}
   m_Layer: 0
   m_Name: Left Leg
   m_TagString: Untagged
@@ -308,3 +371,33 @@ MonoBehaviour:
   jumpHeightFactor: -1
   jumpDuration: 0.35
   pos: {x: 0, y: 0}
+  birdHit:
+    m_PersistentCalls:
+      m_Calls: []
+  IsOnHorizontal: -1
+  leftIdleAnimation: {fileID: 7400000, guid: 64cc93a0d48c5084e95f1fb2b05b4488, type: 2}
+  rightIdleAnimation: {fileID: -9164448148390486437, guid: 9a6c543e0770af44f89bd41743a7c5b3, type: 3}
+  leftFlyingAnimation: {fileID: -2108101208606419659, guid: 13ca61d168bfdc64fb404eee7a88d136, type: 3}
+  rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+--- !u!95 &7682119240637697557
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6306322821044360193}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27029251984de0e41bde6b1ed5078db9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

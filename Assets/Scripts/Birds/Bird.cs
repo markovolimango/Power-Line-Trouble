@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Grid;
 using UnityEngine;
@@ -19,8 +20,8 @@ namespace Birds
         protected GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
-        public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
-        protected bool JustDied;
+        [NonSerialized] public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
+        [NonSerialized] public bool JustDied;
         protected Branch[,] VerticalBranches;
         protected Animator Animator;
         public AnimationClip leftIdleAnimation;
