@@ -26,10 +26,10 @@ namespace Birds
                 return;
             }
 
-            //var spawnPos = new Vector2Int(Random.Range(1, _grid.n - 1), Random.Range(1, _grid.m - 1));
-            var spawnPos = new Vector2Int(2, 2);
-            //var i = Random.Range(0, birdPrefabs.Length);
-            var i = 1;
+            var spawnPos = new Vector2Int(Random.Range(1, _grid.n - 1), Random.Range(1, _grid.m - 1));
+            //var spawnPos = new Vector2Int(2, 2);
+            var i = Random.Range(0, birdPrefabs.Length);
+            //var i = 1;
             var bird = Instantiate(birdPrefabs[i], transform);
             bird.GetComponent<Bird>().pos = spawnPos;
 
