@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
-using UnityEditorInternal;
 using UnityEngine;
 
 namespace Grid
@@ -10,38 +9,47 @@ namespace Grid
     public abstract class Branch : MonoBehaviour
     {
         public float spaceBetweenBirds;
+        public Sprite[] sprites;
+        private int _spriteIndex;
+        protected SpriteRenderer _spriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
-        protected LineRenderer LineRenderer;
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
+
+        private void FixedUpdate()
+        {
+            ArrangeBirds();
+        }
 
         public virtual void SetEdges(Vector2 start, Vector2 end)
         {
-            LineRenderer = GetComponent<LineRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteIndex = 0;
+            _spriteRenderer.sprite = sprites[0];
             StartPos = start;
-            LineRenderer.SetPosition(0, start);
             MidPos = (start + end) / 2;
-            LineRenderer.SetPosition(1, (start + end) / 2);
             EndPos = end;
-            LineRenderer.SetPosition(2, end);
         }
 
         public virtual void AttachBird(Bird bird)
         {
-           //print("BordAttached");
-            MidPos.y -= 0.2f;
             Birds.Add(bird);
-            LineRenderer.SetPosition(1, MidPos);
-            ArrangeBirds();
+            if (_spriteIndex < sprites.Length - 1)
+            {
+                _spriteIndex++;
+                _spriteRenderer.sprite = sprites[_spriteIndex];
+                MidPos.y -= 0.2f;
+            }
         }
 
         public void DetachBird(Bird bird)
         {
-            if (MidPos != (StartPos + EndPos) / 2)
-                MidPos.y += 0.2f;
-            //print("Detached");
             Birds.Remove(bird);
-            LineRenderer.SetPosition(1, MidPos);
-            ArrangeBirds();
+            if (_spriteIndex > 0)
+            {
+                _spriteIndex--;
+                _spriteRenderer.sprite = sprites[_spriteIndex];
+                MidPos.y += 0.2f;
+            }
         }
 
         public void KillBirds()

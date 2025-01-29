@@ -36,8 +36,7 @@ namespace Grid
             for (var j = 0; j < n - 1; j++)
             {
                 var branch = Instantiate(horizontalBranchPrefab, NodePositions[i, j], transform.rotation, transform);
-                branch.transform.position =
-                    new Vector3(branch.transform.position.x + distanceX, branch.transform.position.y, i);
+                branch.transform.position = new Vector3(branch.transform.position.x, branch.transform.position.y, i);
                 HorizontalBranches[i, j] = branch.GetComponent<HorizontalBranch>();
                 HorizontalBranches[i, j].SetEdges(NodePositions[i, j], NodePositions[i, j + 1]);
             }
@@ -47,8 +46,7 @@ namespace Grid
             for (var i = 0; i < m - 1; i++)
             {
                 var branch = Instantiate(verticalBranchPrefab, NodePositions[i, j], transform.rotation, transform);
-                branch.transform.position =
-                    new Vector3(branch.transform.position.x + distanceX, branch.transform.position.y, i);
+                branch.transform.position = new Vector3(branch.transform.position.x, branch.transform.position.y, i);
                 VerticalBranches[i, j] = branch.GetComponent<VerticalBranch>();
                 VerticalBranches[i, j].SetEdges(NodePositions[i, j], NodePositions[i + 1, j]);
             }

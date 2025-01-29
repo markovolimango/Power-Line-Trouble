@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
       propertyPath: spawnTime
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7422567413413882279, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
       propertyPath: m_Name
@@ -676,6 +676,10 @@ PrefabInstance:
     - target: {fileID: 4937597498726362095, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966673413917216034, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
+      propertyPath: m_GridSnapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
