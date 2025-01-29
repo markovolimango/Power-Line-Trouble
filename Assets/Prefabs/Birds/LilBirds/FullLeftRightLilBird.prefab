@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
-  shitTime: 0
+  shitTime: 10
   jumpHeightFactor: 0.8
   jumpDuration: 0.15
   pos: {x: 0, y: 0}

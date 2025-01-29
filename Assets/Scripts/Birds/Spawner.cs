@@ -29,12 +29,13 @@ namespace Birds
             var spawnPos = new Vector2Int(Random.Range(1, _grid.n - 1), Random.Range(1, _grid.m - 1));
             //var spawnPos = new Vector2Int(2, 2);
             var i = Random.Range(0, birdPrefabs.Length);
-            //var i = 0;
-            var bird = Instantiate(birdPrefabs[i], transform);
+            //var i = 6;
+            var birdObject = Instantiate(birdPrefabs[i], transform);
+            var bird = birdObject.GetComponent<Bird>();
 
-            _dj.tsk.AddListener(bird.GetComponent<Bird>().OnTsk);
-            _dj.boom.AddListener(bird.GetComponent<Bird>().OnBoom);
-            bird.GetComponent<Bird>().pos = spawnPos;
+            _dj.tsk.AddListener(bird.OnTsk);
+            _dj.boom.AddListener(bird.OnBoom);
+            bird.pos = spawnPos;
 
             _spawnTimer = spawnTime;
         }
