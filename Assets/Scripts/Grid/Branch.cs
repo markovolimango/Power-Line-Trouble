@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
+using Shaders;
 using UnityEngine;
 
 namespace Grid
@@ -14,7 +15,15 @@ namespace Grid
         protected SpriteRenderer _spriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
-
+        //protected LeftToRightColorChangeShaderController _leftToRightColorChangeShaderController;
+        protected PulseShaderController _pulseShaderController;
+        
+        private void Start()
+        {
+            _pulseShaderController = GetComponent<PulseShaderController>();
+            //_leftToRightColorChangeShaderController = GetComponent<LeftToRightColorChangeShaderController>();
+        }
+        
         private void FixedUpdate()
         {
             ArrangeBirds();
@@ -52,9 +61,10 @@ namespace Grid
             }
         }
 
-        public void KillBirds()
+        public void KillBirds(bool leftToRight, float speed)
         {
             //print("KILLING");
+            _pulseShaderController.Pulse(3);
             foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 

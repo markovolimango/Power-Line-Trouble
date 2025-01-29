@@ -130,7 +130,7 @@ namespace Birds
             if (_shitTimer > 0)
             {
                 _shitTimer--;
-                if(_shitTimer<=2) _pulseShaderController.Pulse();
+                if(_shitTimer<=2) _pulseShaderController.Pulse(1);
                 return;
             }
 
