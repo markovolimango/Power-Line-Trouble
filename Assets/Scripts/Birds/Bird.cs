@@ -81,7 +81,7 @@ namespace Birds
             transform.position = end;
         }
 
-        private Vector2 CalculateBezierPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2)
+        private static Vector2 CalculateBezierPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2)
         {
             var u = 1 - t;
             var tt = t * t;
@@ -108,7 +108,7 @@ namespace Birds
             if (Health <= 0) Die();
         }
 
-        public virtual void Die()
+        protected virtual void Die()
         {
             JustDied = true;
             Destroy(gameObject);

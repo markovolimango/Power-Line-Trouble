@@ -37,7 +37,7 @@ namespace Grid
             {
                 _spriteIndex++;
                 _spriteRenderer.sprite = sprites[_spriteIndex];
-                MidPos.y -= 0.2f;
+                MidPos.y -= 0.1f;
             }
         }
 
@@ -48,7 +48,7 @@ namespace Grid
             {
                 _spriteIndex--;
                 _spriteRenderer.sprite = sprites[_spriteIndex];
-                MidPos.y += 0.2f;
+                MidPos.y += 0.1f;
             }
         }
 

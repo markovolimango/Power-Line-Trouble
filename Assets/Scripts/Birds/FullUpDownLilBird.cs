@@ -17,8 +17,8 @@ namespace Birds
             MoveBirdToPos(pos+JumpDir);
             if(pos.y==0 || pos.y==Grid.m-1) JumpDir *= -1;
         }
-        
-        public override void Die()
+
+        protected override void Die()
         {
             base.Die();
         }
