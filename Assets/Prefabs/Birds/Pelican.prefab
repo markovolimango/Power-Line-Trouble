@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5187362323489508763}
   - component: {fileID: 4652380247444744598}
   - component: {fileID: 2746042742298102942}
+  - component: {fileID: 506580851068272781}
   m_Layer: 0
   m_Name: Pelican
   m_TagString: Untagged
@@ -102,4 +103,30 @@ MonoBehaviour:
   jumpHeightFactor: 1
   jumpDuration: 0.4
   pos: {x: 0, y: 0}
+  leftIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
   healAmount: 100
+--- !u!95 &506580851068272781
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820215849620287213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27029251984de0e41bde6b1ed5078db9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

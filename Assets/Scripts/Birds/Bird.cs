@@ -1,6 +1,7 @@
 using System.Collections;
 using Grid;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Birds
 {
@@ -18,9 +19,16 @@ namespace Birds
         protected int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
         protected bool JustDied;
         protected Branch[,] VerticalBranches;
+        protected Animator Animator;
+        public AnimationClip leftIdleAnimation;
+        public AnimationClip rightIdleAnimation;
+        public AnimationClip leftFlyingAnimation;
+        public AnimationClip rightFlyingAnimation;
+        public AnimationClip deathAnimation;
 
         protected virtual void Start()
         {
+            Animator = GetComponent<Animator>();
             Grid = FindFirstObjectByType<GridManager>();
             HorizontalBranches = Grid.HorizontalBranches;
             VerticalBranches = Grid.VerticalBranches;
@@ -28,10 +36,15 @@ namespace Birds
             _shitTimer = shitTime;
             pos = new Vector2Int(-1, -1);
             MoveBirdToPos(startingPos);
+            if(Random.Range(0,2)==0) Animator.Play(leftIdleAnimation.name);
+            else Animator.Play(rightIdleAnimation.name);
+            Animator.Play(leftIdleAnimation.name);
         }
 
         protected virtual void MoveBirdToPos(Vector2Int newPos)
         {
+            
+            if (JustDied) return;
             var startPos = transform.position;
             var endPos = new Vector3();
             if (IsOnHorizontal == -1)
@@ -45,7 +58,8 @@ namespace Birds
             if (IsOnHorizontal == 1)
                 endPos = HorizontalBranches[newPos.y, newPos.x].MidPos;
             else if (IsOnHorizontal == 0) endPos = VerticalBranches[newPos.y, newPos.x].MidPos;
-
+            if(startPos.x<endPos.x) Animator.Play(rightFlyingAnimation.name);
+            else Animator.Play(leftFlyingAnimation.name);
             MoveInSmoothSlurpeLine(startPos, endPos, 0.5f, 0.2f);
             if (IsOnHorizontal == 1)
             {
@@ -103,6 +117,7 @@ namespace Birds
 
         public void OnBoom()
         {
+            if (JustDied) return;
             if (_shitTimer > 0)
             {
                 _shitTimer--;
@@ -116,6 +131,7 @@ namespace Birds
 
         public virtual void GetHit()
         {
+            if (JustDied) return;
             Health--;
             if (IsOnHorizontal == 1)
                 HorizontalBranches[pos.y, pos.x].DetachBird(this);
@@ -127,6 +143,13 @@ namespace Birds
         public virtual void Die()
         {
             JustDied = true;
+            StartCoroutine(PlayDeathAnimation());
+        }
+
+        private IEnumerator PlayDeathAnimation()
+        {
+            Animator.Play(deathAnimation.name);
+            yield return new WaitForSeconds(deathAnimation.length);
             Destroy(gameObject);
         }
 

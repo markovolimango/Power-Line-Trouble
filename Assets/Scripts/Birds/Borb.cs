@@ -1,4 +1,5 @@
-﻿using Grid;
+﻿using System.Collections;
+using Grid;
 using UnityEngine;
 
 namespace Birds
@@ -20,7 +21,19 @@ namespace Birds
                 var newPos = new Vector2Int(Random.Range(1, Grid.n - 1), Random.Range(1, Grid.m - 1));
                 while (newPos==pos) newPos = new Vector2Int(Random.Range(1, Grid.n - 1), Random.Range(1, Grid.m - 1));
                 MoveBirdToPos(newPos);
+
+                if (Random.Range(0, 2) == 0)
+                {
+                    Animator.Play(leftIdleAnimation.name);
+                    print("Lidle");
+                }
+                else
+                {
+                    Animator.Play(rightIdleAnimation.name);
+                    print("Ridle");
+                }
             }
         }
+        
     }
 }

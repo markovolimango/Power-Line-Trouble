@@ -13,8 +13,11 @@ namespace Birds
 
         public override void OnTsk()
         {
+            if (JustDied) return;
             MoveBirdToPos(pos + JumpDir);
             if (pos.x == 0 || pos.x == Grid.n - 1) JumpDir *= -1;
+            if(JumpDir==Vector2Int.left) Animator.Play(leftIdleAnimation.name);
+            else Animator.Play(rightIdleAnimation.name);
         }
     }
 }
