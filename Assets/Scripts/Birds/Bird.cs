@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Grid;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Birds
@@ -13,6 +14,7 @@ namespace Birds
         public float jumpHeightFactor;
         public float jumpDuration;
         public Vector2Int pos;
+        public UnityEvent birdHit;
         private int _shitTimer;
         protected GridManager Grid;
         protected int Health = 1;
@@ -120,6 +122,7 @@ namespace Birds
 
         public virtual void GetHit()
         {
+            birdHit.Invoke();
             Health--;
             if (IsOnHorizontal == 1)
                 HorizontalBranches[pos.y, pos.x].DetachBird(this);

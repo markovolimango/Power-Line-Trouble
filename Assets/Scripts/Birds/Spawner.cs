@@ -7,6 +7,7 @@ namespace Birds
     {
         public int spawnTime;
         public GameObject[] birdPrefabs;
+        private ComboMeter _combo;
         private DJScript _dj;
         private GridManager _grid;
         private int _spawnTimer;
@@ -16,6 +17,7 @@ namespace Birds
             _dj = FindFirstObjectByType<DJScript>();
             _grid = FindObjectOfType<GridManager>();
             _spawnTimer = spawnTime;
+            _combo = FindObjectOfType<ComboMeter>();
         }
 
         public void OnTsk()
@@ -35,6 +37,7 @@ namespace Birds
 
             _dj.tsk.AddListener(bird.OnTsk);
             _dj.boom.AddListener(bird.OnBoom);
+            bird.birdHit.AddListener(_combo.OnBirdHit);
             bird.pos = spawnPos;
 
             _spawnTimer = spawnTime;
