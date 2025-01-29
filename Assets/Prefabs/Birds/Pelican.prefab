@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5187362323489508763}
   - component: {fileID: 4652380247444744598}
   - component: {fileID: 2746042742298102942}
+  - component: {fileID: 5746625337466664553}
   - component: {fileID: 506580851068272781}
   m_Layer: 0
   m_Name: Pelican
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,11 +77,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 6557696895482232280, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.55, y: 0.475}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,12 +104,28 @@ MonoBehaviour:
   jumpHeightFactor: 1
   jumpDuration: 0.4
   pos: {x: 0, y: 0}
+  birdHit:
+    m_PersistentCalls:
+      m_Calls: []
   leftIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
   healAmount: 100
+--- !u!114 &5746625337466664553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820215849620287213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
 --- !u!95 &506580851068272781
 Animator:
   serializedVersion: 5

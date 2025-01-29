@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Grid;
+using Shaders;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.Events;
@@ -29,9 +30,11 @@ namespace Birds
         public AnimationClip leftFlyingAnimation;
         public AnimationClip rightFlyingAnimation;
         public AnimationClip deathAnimation;
+        protected PulseShaderController _pulseShaderController;
 
         protected virtual void Start()
         {
+            _pulseShaderController = GetComponent<PulseShaderController>();
             Animator = GetComponent<Animator>();
             Grid = FindFirstObjectByType<GridManager>();
             HorizontalBranches = Grid.HorizontalBranches;
@@ -127,13 +130,18 @@ namespace Birds
             if (_shitTimer > 0)
             {
                 _shitTimer--;
+                if(_shitTimer<=2) _pulseShaderController.Pulse();
                 return;
             }
 
+            Shit();
+        }
+
+        protected virtual void Shit()
+        {
             Instantiate(shit, new Vector3(transform.position.x, transform.position.y, 10f), transform.rotation);
             _shitTimer = shitTime;
         }
-
 
         public virtual void GetHit()
         {
