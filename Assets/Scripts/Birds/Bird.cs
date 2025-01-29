@@ -2,6 +2,8 @@ using System.Collections;
 using Grid;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace Birds
 {
@@ -12,11 +14,12 @@ namespace Birds
         public float jumpHeightFactor;
         public float jumpDuration;
         public Vector2Int pos;
+        public UnityEvent birdHit;
         private int _shitTimer;
         protected GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
-        protected int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
+        public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
         protected bool JustDied;
         protected Branch[,] VerticalBranches;
         protected Animator Animator;
@@ -65,11 +68,13 @@ namespace Birds
             {
                 if (pos != new Vector2Int(-1, -1)) HorizontalBranches[pos.y, pos.x].DetachBird(this);
                 HorizontalBranches[newPos.y, newPos.x].AttachBird(this);
+                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
             }
             else if (IsOnHorizontal == 0)
             {
                 if (pos != new Vector2Int(-1, -1)) VerticalBranches[pos.y, pos.x].DetachBird(this);
                 VerticalBranches[newPos.y, newPos.x].AttachBird(this);
+                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
             }
 
             pos = newPos;
@@ -131,6 +136,7 @@ namespace Birds
 
         public virtual void GetHit()
         {
+            birdHit.Invoke();
             if (JustDied) return;
             Health--;
             if (IsOnHorizontal == 1)
@@ -151,11 +157,6 @@ namespace Birds
             Animator.Play(deathAnimation.name);
             yield return new WaitForSeconds(deathAnimation.length);
             Destroy(gameObject);
-        }
-
-        protected bool IsInBounds(Vector2 pos)
-        {
-            return pos.x >= 0 && pos.x < Grid.n && pos.y >= 0 && pos.y < Grid.m;
         }
     }
 }
