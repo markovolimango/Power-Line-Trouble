@@ -113,6 +113,8 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: 7400000, guid: 4ed4ef9b1ca3d8e4daa1039cde71eebc, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  hitLeftIdleAnimation: {fileID: 7400000, guid: 66d5cf310cfb6634395955337c9e47cf, type: 2}
+  hitRightIdleAnimation: {fileID: 7400000, guid: 67e9af9a734ecf740aefac5ef621e69d, type: 2}
 --- !u!95 &3603417635967085390
 Animator:
   serializedVersion: 5
@@ -161,7 +163,6 @@ GameObject:
   - component: {fileID: 487892165852166777}
   - component: {fileID: 73093115676575548}
   - component: {fileID: 1931440652816264008}
-  - component: {fileID: 3062468915696725918}
   m_Layer: 0
   m_Name: Electricity
   m_TagString: Untagged
@@ -204,7 +205,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
+  - {fileID: 2100000, guid: 246aff0e842b87f4b9e1b547444eb5e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,19 +258,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3062468915696725918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9056686044370945647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0.28627452, b: 0.28627452, a: 1}
-  pulseSpeed: 5
-  pulseDuration: 0.3
-  pulseInterval: 0.3

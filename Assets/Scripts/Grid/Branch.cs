@@ -23,6 +23,7 @@ namespace Grid
         {
             PulseShaderController = GetComponent<PulseShaderController>();
             Electricity = transform.Find("Electricity");
+            Electricity.gameObject.SetActive(false);
             
         }
         
@@ -74,7 +75,7 @@ namespace Grid
         private IEnumerator Electryfy()
         {
             Electricity.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.3f);
             Electricity.gameObject.SetActive(false);
         }
 

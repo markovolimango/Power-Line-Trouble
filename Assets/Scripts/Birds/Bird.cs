@@ -17,7 +17,7 @@ namespace Birds
         public float jumpDuration;
         public Vector2Int pos;
         public UnityEvent birdHit;
-        private int _shitTimer;
+        protected int ShitTimer;
         protected GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
@@ -40,7 +40,7 @@ namespace Birds
             HorizontalBranches = Grid.HorizontalBranches;
             VerticalBranches = Grid.VerticalBranches;
             var startingPos = pos;
-            _shitTimer = shitTime;
+            ShitTimer = shitTime;
             pos = new Vector2Int(-1, -1);
             MoveBirdToPos(startingPos);
             if(Random.Range(0,2)==0) Animator.Play(leftIdleAnimation.name);
@@ -124,13 +124,13 @@ namespace Birds
         {
         }
 
-        public void OnBoom()
+        public virtual void OnBoom()
         {
             if (JustDied) return;
-            if (_shitTimer > 0)
+            if (ShitTimer > 0)
             {
-                _shitTimer--;
-                if(_shitTimer<=2) _pulseShaderController.Pulse(1);
+                ShitTimer--;
+                if(ShitTimer<=2) _pulseShaderController.Pulse(1);
                 return;
             }
 
@@ -140,7 +140,7 @@ namespace Birds
         protected virtual void Shit()
         {
             Instantiate(shit, new Vector3(transform.position.x, transform.position.y, 10f), transform.rotation);
-            _shitTimer = shitTime;
+            ShitTimer = shitTime;
         }
 
         public virtual void GetHit()

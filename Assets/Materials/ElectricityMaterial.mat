@@ -57,15 +57,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ElectricityAmount: 2
-    - _ElectricityScale: 50
-    - _ElectricityThickness: 0
+    - _ElectricityAmount: 10
+    - _ElectricityScale: 8
+    - _ElectricityThickness: 100
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _Color: {r: 0.9920671, g: 1, b: 0, a: 1}
-    - _ElectricitySpeed: {r: 0, g: 3, b: 0, a: 0}
+    - _Color: {r: 0.99215686, g: 1, b: 0, a: 1}
+    - _ElectricitySpeed: {r: 0, g: 100, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _NoiseSpeed: {r: 0.1, g: -3, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.1, g: -100, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &9134646220914457232
