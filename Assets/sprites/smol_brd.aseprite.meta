@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 56}
   - name: smol_brd_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.1764706}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 4}
   - name: smol_brd_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -443,7 +443,7 @@ ScriptedImporter:
     uvTransform: {x: 24, y: 82}
   - name: smol_brd_Frame_16
     originalName: 
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.1764706}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -463,7 +463,7 @@ ScriptedImporter:
     uvTransform: {x: 84, y: 4}
   - name: smol_brd_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.16666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
