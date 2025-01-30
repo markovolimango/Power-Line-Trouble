@@ -112,6 +112,9 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  birdSounds:
+  - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}
+  explosionSound: {fileID: 8300000, guid: a6b1b43e5bb9b6540a16a886a573a3f9, type: 3}
   healAmount: 100
 --- !u!114 &5746625337466664553
 MonoBehaviour:

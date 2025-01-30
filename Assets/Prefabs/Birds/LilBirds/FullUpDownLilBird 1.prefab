@@ -112,6 +112,9 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: 7400000, guid: 61e43fd43ac2ab24b9fdcc30f9f5074e, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 360d1e2ba8309274e8aed3fb9980c6f6, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  birdSounds:
+  - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
+  explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
 --- !u!95 &-2885592311235954728
 Animator:
   serializedVersion: 5
@@ -145,3 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.28627452, b: 0.28627452, a: 1}
+  pulseSpeed: 5
+  pulseDuration: 0.3
+  pulseInterval: 0.3

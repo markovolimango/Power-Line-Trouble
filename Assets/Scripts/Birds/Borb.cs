@@ -41,6 +41,7 @@ namespace Birds
             base.GetHit();
             if (!JustDied)
             {
+                BirdSoundSorce.Play();
                 IsHit = true;
                 IsOnHorizontal = -1;
                 leftIdleAnimation=hitLeftIdleAnimation;

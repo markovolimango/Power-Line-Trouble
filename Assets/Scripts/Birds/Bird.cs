@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Grid;
 using Shaders;
 using UnityEngine;
@@ -31,9 +32,17 @@ namespace Birds
         public AnimationClip rightFlyingAnimation;
         public AnimationClip deathAnimation;
         protected PulseShaderController _pulseShaderController;
+        public List<AudioClip> birdSounds = new();
+        public AudioClip explosionSound;
+        protected AudioSource BirdSoundSorce;
+        protected AudioSource ExplosionSoundSorce;
 
         protected virtual void Start()
         {
+            BirdSoundSorce = gameObject.AddComponent<AudioSource>();
+            ExplosionSoundSorce = gameObject.AddComponent<AudioSource>();
+            BirdSoundSorce.clip=birdSounds[Random.Range(0,birdSounds.Count)];
+            ExplosionSoundSorce.clip=explosionSound;
             _pulseShaderController = GetComponent<PulseShaderController>();
             Animator = GetComponent<Animator>();
             Grid = FindFirstObjectByType<GridManager>();
@@ -163,8 +172,10 @@ namespace Birds
 
         private IEnumerator PlayDeathAnimation()
         {
+            ExplosionSoundSorce.Play();
+            if (Random.Range(0, 2)==0) BirdSoundSorce.Play();
             Animator.Play(deathAnimation.name);
-            yield return new WaitForSeconds(deathAnimation.length);
+            yield return new WaitForSeconds(Mathf.Max(Mathf.Max(BirdSoundSorce.clip.length, ExplosionSoundSorce.clip.length),deathAnimation.length));
             Destroy(gameObject);
         }
     }
