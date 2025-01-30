@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8691878236805096774}
   - component: {fileID: 1581412479961201289}
   - component: {fileID: 3322630079160587954}
-  - component: {fileID: 3484897377441114739}
   m_Layer: 0
   m_Name: Right Leg
   m_TagString: Untagged
@@ -55,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
+  - {fileID: 2100000, guid: de5bbfc3797ae48bbb283b63403fcdf3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,18 +132,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3484897377441114739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700983681740188773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4625518605915070432
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.28627452, b: 0.28627452, a: 1}
+  pulseSpeed: 5
+  pulseDuration: 0.3
+  pulseInterval: 0.3
 --- !u!1 &6306322821044360193
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +295,6 @@ GameObject:
   - component: {fileID: 8403480502051996592}
   - component: {fileID: 1425117198473365706}
   - component: {fileID: 7682119240637697557}
-  - component: {fileID: 7282291876630405904}
   m_Layer: 0
   m_Name: Left Leg
   m_TagString: Untagged
@@ -347,7 +337,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
+  - {fileID: 2100000, guid: de5bbfc3797ae48bbb283b63403fcdf3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -425,15 +415,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7282291876630405904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6306322821044360193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
