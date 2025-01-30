@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
@@ -15,13 +16,14 @@ namespace Grid
         protected SpriteRenderer _spriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
-        //protected LeftToRightColorChangeShaderController _leftToRightColorChangeShaderController;
-        protected PulseShaderController _pulseShaderController;
+        protected PulseShaderController PulseShaderController;
+        protected Transform Electricity;
         
         private void Start()
         {
-            _pulseShaderController = GetComponent<PulseShaderController>();
-            //_leftToRightColorChangeShaderController = GetComponent<LeftToRightColorChangeShaderController>();
+            PulseShaderController = GetComponent<PulseShaderController>();
+            Electricity = transform.Find("Electricity");
+            
         }
         
         private void FixedUpdate()
@@ -64,8 +66,16 @@ namespace Grid
         public void KillBirds(bool leftToRight, float speed)
         {
             //print("KILLING");
-            _pulseShaderController.Pulse(3);
+            StartCoroutine(Electryfy());
+            PulseShaderController.Pulse(3);
             foreach (var bird in Birds.ToList()) bird.GetHit();
+        }
+
+        private IEnumerator Electryfy()
+        {
+            Electricity.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.35f);
+            Electricity.gameObject.SetActive(false);
         }
 
         protected abstract void ArrangeBirds();
