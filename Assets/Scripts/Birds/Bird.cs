@@ -36,9 +36,11 @@ namespace Birds
         public AudioClip explosionSound;
         protected AudioSource BirdSoundSorce;
         protected AudioSource ExplosionSoundSorce;
+        public ParticleSystem particles;
 
         protected virtual void Start()
         {
+            particles=GetComponent<ParticleSystem>();
             BirdSoundSorce = gameObject.AddComponent<AudioSource>();
             ExplosionSoundSorce = gameObject.AddComponent<AudioSource>();
             BirdSoundSorce.clip=birdSounds[Random.Range(0,birdSounds.Count)];
@@ -156,6 +158,7 @@ namespace Birds
         {
             birdHit.Invoke();
             if (JustDied) return;
+            particles.Play();
             Health--;
             if (IsOnHorizontal == 1)
                 HorizontalBranches[pos.y, pos.x].DetachBird(this);

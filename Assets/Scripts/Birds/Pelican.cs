@@ -6,7 +6,7 @@ namespace Birds
     {
         public int healAmount;
         private Health _carHealth;
-
+        
         public override void GetHit()
         {
             if (JustDied) return;
