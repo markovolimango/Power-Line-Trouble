@@ -1,4 +1,5 @@
 using Grid;
+using Shaders;
 using UnityEngine;
 
 namespace Birds
@@ -11,6 +12,8 @@ namespace Birds
         {
             IsOnHorizontal = Random.Range(0, 2);
             Grid = FindFirstObjectByType<GridManager>();
+            _pulseShaderController = GetComponent<PulseShaderController>();
+
             _leftLeg = transform.GetChild(0).GetComponent<Leg>();
             _leftLeg.IsOnHorizontal = IsOnHorizontal;
             _leftLeg.pos = pos;
