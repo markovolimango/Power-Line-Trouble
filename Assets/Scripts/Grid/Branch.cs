@@ -76,7 +76,7 @@ namespace Grid
         private IEnumerator Electrify()
         {
             _electricity.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.3f);
             _electricity.gameObject.SetActive(false);
         }
 
