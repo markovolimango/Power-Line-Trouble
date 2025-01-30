@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
+  pulseSpeed: 5
+  pulseDuration: 0.3
+  pulseInterval: 0.3
 --- !u!95 &506580851068272781
 Animator:
   serializedVersion: 5

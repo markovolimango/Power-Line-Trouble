@@ -18,13 +18,14 @@ namespace Grid
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
         protected PulseShaderController PulseShaderController;
         protected Transform Electricity;
+        //protected ParticleSystem ElectricityParticles;
         
         private void Start()
         {
             PulseShaderController = GetComponent<PulseShaderController>();
             Electricity = transform.Find("Electricity");
             Electricity.gameObject.SetActive(false);
-            
+            //ElectricityParticles = transform.Find("WireParticles").GetComponent<ParticleSystem>();
         }
         
         private void FixedUpdate()
@@ -75,6 +76,7 @@ namespace Grid
         private IEnumerator Electryfy()
         {
             Electricity.gameObject.SetActive(true);
+            //ElectricityParticles.Play();
             yield return new WaitForSeconds(0.3f);
             Electricity.gameObject.SetActive(false);
         }
