@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 834f6bf7231b545c3b081c9974c3e74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: f20525ae00af6d5428e91d92d05ca1d7, type: 3}
   shitTime: 10
   jumpHeightFactor: 1
   jumpDuration: 0.4
@@ -116,7 +116,7 @@ MonoBehaviour:
   deathAnimation: {fileID: 7400000, guid: 8f54ec8a60666c344a13af908ad06759, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}
-  explosionSound: {fileID: 8300000, guid: a6b1b43e5bb9b6540a16a886a573a3f9, type: 3}
+  explosionSound: {fileID: 8300000, guid: 69c6a975b9d9bce449817114bbc15bb9, type: 3}
   particles: {fileID: 0}
   healAmount: 100
 --- !u!114 &5746625337466664553

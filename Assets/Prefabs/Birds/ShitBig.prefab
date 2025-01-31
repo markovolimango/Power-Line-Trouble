@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8020157764070074217}
   - component: {fileID: 6883637985826579222}
   m_Layer: 12
-  m_Name: Shit
+  m_Name: ShitBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -264181610454383161, guid: c4b13b917dc654f42b41ca17dd5d3057, type: 3}
+  m_Sprite: {fileID: -7318373342432487268, guid: da639bec4a0951747bac46523013958f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.1, y: 0.15}
+    oldSize: {x: 0.04, y: 0.06}
     newSize: {x: 0.02, y: 0.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -169,7 +169,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bba64edb6f00ecd418ff81f8c1cbd64d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

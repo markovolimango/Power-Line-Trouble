@@ -114,6 +114,7 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
   explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &3322630079160587954
 Animator:
   serializedVersion: 5
@@ -236,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7994e5a3ce446aba403b0d1dd21fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: f20525ae00af6d5428e91d92d05ca1d7, type: 3}
   shitTime: 10
   jumpHeightFactor: 1
   jumpDuration: 0.35
@@ -252,6 +253,7 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: b311cf977130a5b459bacdad6d8504b2, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &8668982076249371037
 Animator:
   serializedVersion: 5
@@ -403,6 +405,7 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
   explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &7682119240637697557
 Animator:
   serializedVersion: 5
