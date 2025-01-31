@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567514e35a8b4cf9ab074487c573985d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: f20525ae00af6d5428e91d92d05ca1d7, type: 3}
   shitTime: 10
   jumpHeightFactor: 1
   jumpDuration: 0.4
