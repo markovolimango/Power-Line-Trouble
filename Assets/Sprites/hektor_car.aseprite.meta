@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67b899385336b4a48b01794062d0d40c
+guid: d501b9ff8e7047744871769db4b2dc4d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,138 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: shitter_Frame_0
+  - name: hektor_car_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5116279, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 82
+      width: 129
+      height: 69
+    spriteID: cf43e2be18b848d4e820fe751c8fb47f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 82}
+  - name: hektor_car_Frame_1
+    originalName: 
+    pivot: {x: 0.5116279, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 82
+      width: 129
+      height: 69
+    spriteID: 69d026c31421dee4ebbef987f5b2ab52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 82}
+  - name: hektor_car_Frame_2
+    originalName: 
+    pivot: {x: 0.5116279, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 278
+      y: 82
+      width: 129
+      height: 69
+    spriteID: b8f8edddfb413324e893831ef79f983c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 278, y: 82}
+  - name: hektor_car_Frame_3
+    originalName: 
+    pivot: {x: 0.5116279, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 129
+      height: 69
+    spriteID: 7ac5ec1541c0f2b4b9b191884a4b88c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: hektor_car_Frame_4
+    originalName: 
+    pivot: {x: 0.5153846, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 4
+      width: 130
+      height: 69
+    spriteID: e3f2edc635884b84ca31ee594f173c30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 4}
+  - name: hektor_car_Frame_5
+    originalName: 
+    pivot: {x: 0.5153846, y: -0.5072464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 282
+      y: 4
+      width: 130
+      height: 69
+    spriteID: 370afa84cf44e5440845aed6edac436f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 282, y: 4}
+  - name: hektor_car_Frame_6
+    originalName: 
+    pivot: {x: 0.50757575, y: -0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 12
-      height: 12
-    spriteID: 17317316565cc104ea4adab4bd0645c6
+      width: 132
+      height: 70
+    spriteID: 7979a1ed3dc631f4892f6327f80e7834
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,115 +261,82 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: shitter_Frame_1
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 24
-      width: 12
-      height: 11
-    spriteID: ad9d73848df31d24396f369c716d064f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 24}
-  - name: shitter_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 43
-      width: 12
-      height: 11
-    spriteID: 56115bb20c51b8d45aa50b54c040ce1a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
-  - name: shitter_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 24
-      y: 4
-      width: 12
-      height: 11
-    spriteID: 9156f544509331b4090b799adcc264f3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 24, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2018994561
-    name: shitter
+    guid: -189881822
+    name: hektor_car
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: shitter_Frame_0
+    - name: hektor_car_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 12
-        height: 12
-      spriteId: 17317316565cc104ea4adab4bd0645c6
-    - name: shitter_Frame_1
+        x: 94
+        y: 35
+        width: 129
+        height: 69
+      spriteId: cf43e2be18b848d4e820fe751c8fb47f
+    - name: hektor_car_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: ad9d73848df31d24396f369c716d064f
-    - name: shitter_Frame_2
+        x: 94
+        y: 35
+        width: 129
+        height: 69
+      spriteId: 69d026c31421dee4ebbef987f5b2ab52
+    - name: hektor_car_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: 56115bb20c51b8d45aa50b54c040ce1a
-    - name: shitter_Frame_3
+        x: 94
+        y: 35
+        width: 129
+        height: 69
+      spriteId: b8f8edddfb413324e893831ef79f983c
+    - name: hektor_car_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: 9156f544509331b4090b799adcc264f3
+        x: 94
+        y: 35
+        width: 129
+        height: 69
+      spriteId: 7ac5ec1541c0f2b4b9b191884a4b88c2
+    - name: hektor_car_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 35
+        width: 130
+        height: 69
+      spriteId: e3f2edc635884b84ca31ee594f173c30
+    - name: hektor_car_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 35
+        width: 130
+        height: 69
+      spriteId: 370afa84cf44e5440845aed6edac436f
+    - name: hektor_car_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 93
+        y: 35
+        width: 132
+        height: 70
+      spriteId: 7979a1ed3dc631f4892f6327f80e7834
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 12, y: 12}
+  canvasSize: {x: 320, y: 180}
