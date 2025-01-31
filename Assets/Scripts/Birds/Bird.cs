@@ -43,6 +43,7 @@ namespace Birds
             particles=GetComponent<ParticleSystem>();
             BirdSoundSorce = gameObject.AddComponent<AudioSource>();
             ExplosionSoundSorce = gameObject.AddComponent<AudioSource>();
+            ExplosionSoundSorce.rolloffMode = AudioRolloffMode.Linear;
             BirdSoundSorce.clip=birdSounds[Random.Range(0,birdSounds.Count)];
             ExplosionSoundSorce.clip=explosionSound;
             _pulseShaderController = GetComponent<PulseShaderController>();
