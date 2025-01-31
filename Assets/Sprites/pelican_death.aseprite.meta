@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67b899385336b4a48b01794062d0d40c
+guid: 133983b1fba309f4ea5d616fc2d26002
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,78 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: shitter_Frame_0
+  - name: pelican_death_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -1.3157893}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 39
+      width: 24
+      height: 19
+    spriteID: 97a34c71dd5a12449ae95848c810c23a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 39}
+  - name: pelican_death_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -1.6470588}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 92
+      width: 24
+      height: 17
+    spriteID: 8827e3120bd0270428279005d809639a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 92}
+  - name: pelican_death_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -1.3888888}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 66
+      width: 24
+      height: 18
+    spriteID: 7b0bb1656deb23447a3f4641f903c70f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 66}
+  - name: pelican_death_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.6296296}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 12
-      height: 12
-    spriteID: 17317316565cc104ea4adab4bd0645c6
+      width: 24
+      height: 27
+    spriteID: c09ef064cbbe6e04196518ce6b963711
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,18 +201,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: shitter_Frame_1
+  - name: pelican_death_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 1.375, y: -1}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 24
-      width: 12
-      height: 11
-    spriteID: ad9d73848df31d24396f369c716d064f
+      x: 36
+      y: 55
+      width: 8
+      height: 15
+    spriteID: b9ff383b457434244975168b64da8519
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +220,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 24}
-  - name: shitter_Frame_2
+    uvTransform: {x: 36, y: 55}
+  - name: pelican_death_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 1.375, y: -0.5555556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 43
-      width: 12
-      height: 11
-    spriteID: 56115bb20c51b8d45aa50b54c040ce1a
+      x: 36
+      y: 29
+      width: 8
+      height: 18
+    spriteID: 5df2613d8a01e354cae1b11ebb23105d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -180,19 +240,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
-  - name: shitter_Frame_3
+    uvTransform: {x: 36, y: 29}
+  - name: pelican_death_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 1.2222223, y: -0.29411766}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24
+      x: 36
       y: 4
-      width: 12
-      height: 11
-    spriteID: 9156f544509331b4090b799adcc264f3
+      width: 9
+      height: 17
+    spriteID: 049d71abb94135a45ab1957f3172909a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -200,56 +260,83 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 24, y: 4}
+    uvTransform: {x: 36, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2018994561
-    name: shitter
+    guid: -767718037
+    name: pelican_death
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: shitter_Frame_0
+    - name: pelican_death_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
-        width: 12
-        height: 12
-      spriteId: 17317316565cc104ea4adab4bd0645c6
-    - name: shitter_Frame_1
+        y: 25
+        width: 24
+        height: 19
+      spriteId: 97a34c71dd5a12449ae95848c810c23a
+    - name: pelican_death_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: ad9d73848df31d24396f369c716d064f
-    - name: shitter_Frame_2
+        y: 28
+        width: 24
+        height: 17
+      spriteId: 8827e3120bd0270428279005d809639a
+    - name: pelican_death_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: 56115bb20c51b8d45aa50b54c040ce1a
-    - name: shitter_Frame_3
+        y: 25
+        width: 24
+        height: 18
+      spriteId: 7b0bb1656deb23447a3f4641f903c70f
+    - name: pelican_death_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
-        width: 12
-        height: 11
-      spriteId: 9156f544509331b4090b799adcc264f3
+        y: 17
+        width: 24
+        height: 27
+      spriteId: c09ef064cbbe6e04196518ce6b963711
+    - name: pelican_death_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 15
+        width: 8
+        height: 15
+      spriteId: b9ff383b457434244975168b64da8519
+    - name: pelican_death_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 10
+        width: 8
+        height: 18
+      spriteId: 5df2613d8a01e354cae1b11ebb23105d
+    - name: pelican_death_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 1
+        y: 5
+        width: 9
+        height: 17
+      spriteId: 049d71abb94135a45ab1957f3172909a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 12, y: 12}
+  canvasSize: {x: 24, y: 48}
