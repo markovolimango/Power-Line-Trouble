@@ -109,13 +109,14 @@ MonoBehaviour:
   birdHit:
     m_PersistentCalls:
       m_Calls: []
+  Grid: {fileID: 0}
   leftIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: fbf4e38d290d1974b84e065ea2be0247, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
-  particles: {fileID: 0}
+  particles: {fileID: 2077694424219486875}
 --- !u!114 &5746625337466664553
 MonoBehaviour:
   m_ObjectHideFlags: 0

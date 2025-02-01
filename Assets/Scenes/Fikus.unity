@@ -183,24 +183,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
       propertyPath: spawnTime
-      value: 3
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
-      propertyPath: birdPrefabs.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
-      propertyPath: birdPrefabs.Array.data[7]
-      value: 
-      objectReference: {fileID: 3763262486387449136, guid: 0bf1ce40d35e1f94caa2a6be88c61f22, type: 3}
-    - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
-      propertyPath: birdPrefabs.Array.data[8]
-      value: 
-      objectReference: {fileID: 4820215849620287213, guid: 608be33e4d2fe004dad153cd8338be0d, type: 3}
-    - target: {fileID: 7396763380898314744, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
-      propertyPath: birdPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 4625518605915070432, guid: a5d2a78c8a6d14d368e0084421d26340, type: 3}
     - target: {fileID: 7422567413413882279, guid: e4c36e361e7cf874985208937f0130d9, type: 3}
       propertyPath: m_Name
       value: Bird Spawner (1)
