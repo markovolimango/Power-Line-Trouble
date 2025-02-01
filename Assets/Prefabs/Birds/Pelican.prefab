@@ -83,7 +83,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 0.45}
+  m_Size: {x: 0.6, y: 0.475}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -113,7 +113,7 @@ MonoBehaviour:
   rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
-  deathAnimation: {fileID: 7400000, guid: 8f54ec8a60666c344a13af908ad06759, type: 2}
+  deathAnimation: {fileID: 7400000, guid: ada6c40a64acb8a43b6f7c804bf98bc4, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}
   explosionSound: {fileID: 8300000, guid: 0858fcdb3cfab7c46981d65b52bbcd29, type: 3}

@@ -98,3 +98,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhp: 100
+  sprites:
+  - {fileID: 7508049692218970952, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: 2030552839051864616, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: 6768280374501193825, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: 6424302384284846508, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: -8087275496552800795, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: -8503265288579208320, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  - {fileID: -8656146085510570608, guid: d501b9ff8e7047744871769db4b2dc4d, type: 3}
+  hpToSpriteChange: 1

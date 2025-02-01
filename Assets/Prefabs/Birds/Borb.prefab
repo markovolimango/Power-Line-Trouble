@@ -114,7 +114,7 @@ MonoBehaviour:
   rightIdleAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
   leftFlyingAnimation: {fileID: 7400000, guid: 4ed4ef9b1ca3d8e4daa1039cde71eebc, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
-  deathAnimation: {fileID: 7400000, guid: 8f54ec8a60666c344a13af908ad06759, type: 2}
+  deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: fbf4e38d290d1974b84e065ea2be0247, type: 3}
   - {fileID: 8300000, guid: eb479526402f4064d8176a40d68d105a, type: 3}

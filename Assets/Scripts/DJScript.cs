@@ -45,7 +45,7 @@ public class DJScript : MonoBehaviour
     private IEnumerator TimePassed()
     {
         PlayMusic();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.9f);
         while (true)
         {
             yield return new WaitForSeconds(beatTime);
