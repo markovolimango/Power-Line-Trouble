@@ -112,7 +112,7 @@ MonoBehaviour:
   Grid: {fileID: 0}
   leftIdleAnimation: {fileID: 7400000, guid: 5b14dce06ed896341967acb225fcc13a, type: 2}
   rightIdleAnimation: {fileID: 7400000, guid: e23e553e72430e14a859687c8bf40f96, type: 2}
-  deathAnimation: {fileID: 7400000, guid: 31e06a61d99f76442a5b742013d52138, type: 2}
+  deathAnimation: {fileID: 7400000, guid: 41cfb0c717f225e48af56c72e204ccdf, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: 6b4c2247d4a64884ca0b8e07db9339d6, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
