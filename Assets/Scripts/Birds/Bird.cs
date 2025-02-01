@@ -38,7 +38,6 @@ namespace Birds
 
         public virtual void Start()
         {
-            particles=GetComponent<ParticleSystem>();
             BirdSoundSorce = gameObject.AddComponent<AudioSource>();
             ExplosionSoundSorce = gameObject.AddComponent<AudioSource>();
             ExplosionSoundSorce.rolloffMode = AudioRolloffMode.Linear;

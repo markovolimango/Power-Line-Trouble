@@ -13,10 +13,12 @@ namespace Birds
         public float speedUpRate;
         public AudioClip megaShitSound;
         public float animationSpeedIncrease;
+        public ParticleSystem megaShitParticles;
 
         public override void Start()
         {
             base.Start();
+            megaShitParticles.emissionRate = 0;
             BirdSoundSorce.PlayOneShot(BirdSoundSorce.clip);
         }
 
@@ -40,8 +42,10 @@ namespace Birds
 
         protected override void Shit()
         {
+            print("Ok");
             ExplosionSoundSorce.clip = megaShitSound;
-            base.Shit();
+            megaShitParticles.emissionRate = 1000;
+            megaShitParticles.Play();
             GetHit();
         }
     }

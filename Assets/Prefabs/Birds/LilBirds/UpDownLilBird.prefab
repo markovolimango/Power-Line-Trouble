@@ -116,7 +116,7 @@ MonoBehaviour:
   birdSounds:
   - {fileID: 8300000, guid: 6b4c2247d4a64884ca0b8e07db9339d6, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
-  particles: {fileID: 0}
+  particles: {fileID: 4616165241289743832}
 --- !u!95 &8745331946368788065
 Animator:
   serializedVersion: 5
