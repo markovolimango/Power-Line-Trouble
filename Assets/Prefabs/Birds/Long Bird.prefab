@@ -111,6 +111,10 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: 556174395091560440, guid: bad782cfb8f874333b01ca0e9b9e08d5, type: 3}
   rightFlyingAnimation: {fileID: 7400000, guid: 92c045879f8ef1840afd7ed948bdb8e9, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  birdSounds:
+  - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
+  explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &3322630079160587954
 Animator:
   serializedVersion: 5
@@ -233,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7994e5a3ce446aba403b0d1dd21fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: f20525ae00af6d5428e91d92d05ca1d7, type: 3}
   shitTime: 10
   jumpHeightFactor: 1
   jumpDuration: 0.35
@@ -246,6 +250,10 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   rightFlyingAnimation: {fileID: 7400000, guid: 61e43fd43ac2ab24b9fdcc30f9f5074e, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  birdSounds:
+  - {fileID: 8300000, guid: b311cf977130a5b459bacdad6d8504b2, type: 3}
+  explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &8668982076249371037
 Animator:
   serializedVersion: 5
@@ -394,6 +402,10 @@ MonoBehaviour:
   leftFlyingAnimation: {fileID: -2108101208606419659, guid: 13ca61d168bfdc64fb404eee7a88d136, type: 3}
   rightFlyingAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
   deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  birdSounds:
+  - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
+  explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
+  particles: {fileID: 0}
 --- !u!95 &7682119240637697557
 Animator:
   serializedVersion: 5

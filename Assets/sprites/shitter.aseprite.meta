@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10b22b99633394af88bb5726306cac13
+guid: 67b899385336b4a48b01794062d0d40c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 40
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638737660881310986
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 12
       height: 12
-    spriteID: f4d9132084ced4bf8aa6b832c99d9ba6
+    spriteID: 17317316565cc104ea4adab4bd0645c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 24
       width: 12
       height: 11
-    spriteID: c94a770ca5dee4227a7b9a02191a25a5
+    spriteID: ad9d73848df31d24396f369c716d064f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 43
       width: 12
       height: 11
-    spriteID: 469fb677177cf465d97602e9f60cf2df
+    spriteID: 56115bb20c51b8d45aa50b54c040ce1a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,6 +181,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 43}
+  - name: shitter_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 4
+      width: 12
+      height: 11
+    spriteID: 9156f544509331b4090b799adcc264f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -198,7 +218,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 12
-      spriteId: f4d9132084ced4bf8aa6b832c99d9ba6
+      spriteId: 17317316565cc104ea4adab4bd0645c6
     - name: shitter_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -207,7 +227,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 11
-      spriteId: c94a770ca5dee4227a7b9a02191a25a5
+      spriteId: ad9d73848df31d24396f369c716d064f
     - name: shitter_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -216,34 +236,19 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 11
-      spriteId: 469fb677177cf465d97602e9f60cf2df
+      spriteId: 56115bb20c51b8d45aa50b54c040ce1a
+    - name: shitter_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 12
+        height: 11
+      spriteId: 9156f544509331b4090b799adcc264f3
     linkedCells: []
     parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
+  platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 

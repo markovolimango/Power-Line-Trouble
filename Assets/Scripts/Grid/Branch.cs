@@ -12,26 +12,34 @@ namespace Grid
     {
         public float spaceBetweenBirds;
         public Sprite[] sprites;
+        private Transform _electricity;
         private int _spriteIndex;
-        protected SpriteRenderer _spriteRenderer;
+        private SpriteRenderer _spriteRenderer, _electricitySpriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
         protected PulseShaderController PulseShaderController;
-        protected Transform Electricity;
+//protected ParticleSystem ElectricityParticles;
         
         private void Start()
         {
             PulseShaderController = GetComponent<PulseShaderController>();
-            Electricity = transform.Find("Electricity");
-            Electricity.gameObject.SetActive(false);
-            
+            _electricity = transform.Find("Electricity");
+            _electricitySpriteRenderer = _electricity.GetComponent<SpriteRenderer>();
+            _electricity = transform.Find("Electricity");
+            _electricity.gameObject.SetActive(false);
+            //ElectricityParticles = transform.Find("WireParticles").GetComponent<ParticleSystem>();
         }
-        
+
         private void FixedUpdate()
         {
             ArrangeBirds();
         }
 
+        public void ScareBirds()
+        {
+            foreach (var bird in Birds.ToList()) bird.OnScare();
+        }
+        
         public virtual void SetEdges(Vector2 start, Vector2 end)
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,7 +57,8 @@ namespace Grid
             {
                 _spriteIndex++;
                 _spriteRenderer.sprite = sprites[_spriteIndex];
-                MidPos.y -= 0.1f;
+                _electricitySpriteRenderer.sprite = sprites[_spriteIndex];
+                MidPos.y -= 0.05f;
             }
         }
 
@@ -60,23 +69,24 @@ namespace Grid
             {
                 _spriteIndex--;
                 _spriteRenderer.sprite = sprites[_spriteIndex];
-                MidPos.y += 0.1f;
+                _electricitySpriteRenderer.sprite = sprites[_spriteIndex];
+                MidPos.y += 0.05f;
             }
         }
 
         public void KillBirds(bool leftToRight, float speed)
         {
             //print("KILLING");
-            StartCoroutine(Electryfy());
+            StartCoroutine(Electrify());
             PulseShaderController.Pulse(3);
             foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 
-        private IEnumerator Electryfy()
+        private IEnumerator Electrify()
         {
-            Electricity.gameObject.SetActive(true);
+            _electricity.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.3f);
-            Electricity.gameObject.SetActive(false);
+            _electricity.gameObject.SetActive(false);
         }
 
         protected abstract void ArrangeBirds();

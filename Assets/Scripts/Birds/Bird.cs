@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Grid;
 using Shaders;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace Birds
         public Vector2Int pos;
         public UnityEvent birdHit;
         protected int ShitTimer;
-        protected GridManager Grid;
+        public GridManager Grid;
         protected int Health = 1;
         protected Branch[,] HorizontalBranches;
         [NonSerialized] public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
@@ -27,13 +28,22 @@ namespace Birds
         protected Animator Animator;
         public AnimationClip leftIdleAnimation;
         public AnimationClip rightIdleAnimation;
-        public AnimationClip leftFlyingAnimation;
-        public AnimationClip rightFlyingAnimation;
         public AnimationClip deathAnimation;
         protected PulseShaderController _pulseShaderController;
+        public List<AudioClip> birdSounds = new();
+        public AudioClip explosionSound;
+        protected AudioSource BirdSoundSorce;
+        protected AudioSource ExplosionSoundSorce;
+        public ParticleSystem particles;
 
-        protected virtual void Start()
+        public virtual void Start()
         {
+            particles=GetComponent<ParticleSystem>();
+            BirdSoundSorce = gameObject.AddComponent<AudioSource>();
+            ExplosionSoundSorce = gameObject.AddComponent<AudioSource>();
+            ExplosionSoundSorce.rolloffMode = AudioRolloffMode.Linear;
+            BirdSoundSorce.clip=birdSounds[Random.Range(0,birdSounds.Count)];
+            ExplosionSoundSorce.clip=explosionSound;
             _pulseShaderController = GetComponent<PulseShaderController>();
             Animator = GetComponent<Animator>();
             Grid = FindFirstObjectByType<GridManager>();
@@ -48,7 +58,15 @@ namespace Birds
             Animator.Play(leftIdleAnimation.name);
         }
 
-        protected virtual void MoveBirdToPos(Vector2Int newPos)
+        public virtual Vector2Int GetRandomPos()
+        {
+            var random_pos= new Vector2Int(Random.Range(1, Grid.n-1), Random.Range(1, Grid.m-1));
+            while(random_pos==pos || random_pos==new Vector2Int(Grid.n-1,Grid.m-1)) random_pos= new Vector2Int(Random.Range(0, Grid.n-1), Random.Range(0, Grid.m-1));
+            return random_pos;
+            //OVDE BI TREBALO DA BUDE (0,n) tj (0,m) ALI NESTO NE RADI
+        }
+        
+        protected virtual void MoveBirdToPos(Vector2Int newPos)// pazi da newpos bude validan
         {
             
             if (JustDied) return;
@@ -56,17 +74,24 @@ namespace Birds
             var endPos = new Vector3();
             if (IsOnHorizontal == -1)
             {
-                if (Random.Range(0, 2) == 0)
-                    IsOnHorizontal = 1;
+                if (newPos.y == Grid.m - 1) IsOnHorizontal = 1;
+                else if (newPos.x == Grid.n - 1) IsOnHorizontal = 0;
                 else
-                    IsOnHorizontal = 0;
+                {
+                    if (Random.Range(0, 2) == 0) IsOnHorizontal = 1;
+                    else  IsOnHorizontal = 0;
+                }
+                /*/
+                if (Random.Range(0, 2) == 0) IsOnHorizontal = 1;
+                else  IsOnHorizontal = 0;
+                /*/
             }
+            
+            print(newPos);
 
             if (IsOnHorizontal == 1)
                 endPos = HorizontalBranches[newPos.y, newPos.x].MidPos;
             else if (IsOnHorizontal == 0) endPos = VerticalBranches[newPos.y, newPos.x].MidPos;
-            if(startPos.x<endPos.x) Animator.Play(rightFlyingAnimation.name);
-            else Animator.Play(leftFlyingAnimation.name);
             MoveInSmoothSlurpeLine(startPos, endPos, 0.5f, 0.2f);
             if (IsOnHorizontal == 1)
             {
@@ -84,13 +109,13 @@ namespace Birds
             pos = newPos;
         }
 
-        public void MoveInSmoothSlurpeLine(Vector2 start, Vector2 end, float height, float duration)
+        protected void MoveInSmoothSlurpeLine(Vector2 start, Vector2 end, float height, float duration)
         {
             StartCoroutine(MoveInSmoothSlurpeLineCoroutine(start, end, (end - start).magnitude * jumpHeightFactor,
                 jumpDuration));
         }
 
-        private IEnumerator MoveInSmoothSlurpeLineCoroutine(Vector2 start, Vector2 end, float height, float duration)
+        protected IEnumerator MoveInSmoothSlurpeLineCoroutine(Vector2 start, Vector2 end, float height, float duration)
         {
             var elapsedTime = 0f;
             var controlPoint = (start + end) / 2 + Vector2.up * height;
@@ -142,11 +167,18 @@ namespace Birds
             Instantiate(shit, new Vector3(transform.position.x, transform.position.y, 10f), transform.rotation);
             ShitTimer = shitTime;
         }
+        
+        public virtual void OnScare()
+        {
+            var newPos = GetRandomPos();
+            MoveBirdToPos(newPos);
+        }
 
         public virtual void GetHit()
         {
             birdHit.Invoke();
             if (JustDied) return;
+            particles.Play();
             Health--;
             if (IsOnHorizontal == 1)
                 HorizontalBranches[pos.y, pos.x].DetachBird(this);
@@ -161,10 +193,12 @@ namespace Birds
             StartCoroutine(PlayDeathAnimation());
         }
 
-        private IEnumerator PlayDeathAnimation()
+        protected virtual IEnumerator PlayDeathAnimation()
         {
+            ExplosionSoundSorce.Play();
+            if (Random.Range(0, 2)==0) BirdSoundSorce.Play();
             Animator.Play(deathAnimation.name);
-            yield return new WaitForSeconds(deathAnimation.length);
+            yield return new WaitForSeconds(Mathf.Max(Mathf.Max(BirdSoundSorce.clip.length, ExplosionSoundSorce.clip.length),deathAnimation.length));
             Destroy(gameObject);
         }
     }

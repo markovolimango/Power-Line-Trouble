@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Grid
 {
@@ -12,10 +13,24 @@ namespace Grid
         [NonSerialized] public Branch[,] HorizontalBranches;
         [NonSerialized] public Vector2[,] NodePositions;
         [NonSerialized] public Branch[,] VerticalBranches;
+        [NonSerialized] public bool[,] NodeIsWatched;
 
+        public void GerScared()
+        {
+            foreach (var br in HorizontalBranches)
+            {
+                br.ScareBirds();
+            }
+            foreach (var br in VerticalBranches)
+            {
+                br.ScareBirds();
+            }
+        }
+        
         private void Start()
         {
             NodePositions = new Vector2[m, n];
+            NodeIsWatched = new bool[m, n];
             var pos = transform.position;
             for (var i = 0; i < m; i++)
             {

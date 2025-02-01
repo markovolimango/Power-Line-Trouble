@@ -22,7 +22,7 @@ public class ComboMeter : MonoBehaviour
             return;
         }
 
-        _player.transform.localScale = Vector3.one * 0.5f;
+        //_player.transform.localScale = Vector3.one * 0.5f;
         if (_combo != 0)
         {
             _combo = 0;
@@ -34,7 +34,7 @@ public class ComboMeter : MonoBehaviour
     {
         _combo++;
         _loseTimer = loseTime;
-        if (_combo % 10 == 0)
-            _player.transform.localScale *= 1.2f;
+        if (_combo % 10 == 0) ;
+        //_player.transform.localScale *= 1.2f;
     }
 }

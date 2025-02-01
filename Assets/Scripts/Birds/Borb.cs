@@ -13,7 +13,8 @@ namespace Birds
         protected bool IsHit;
         public AnimationClip hitLeftIdleAnimation;
         public AnimationClip hitRightIdleAnimation;
-        protected override void Start()
+
+        public override void Start()
         {
             base.Start();
             Health = 2;
@@ -26,7 +27,7 @@ namespace Birds
         public override void OnBoom()
         {
             base.OnBoom();
-            if(IsHit && !JustDied) StartCoroutine(Electryfy());
+            if(IsHit && !JustDied && Random.Range(0,4)==0) StartCoroutine(Electryfy());
         }
         
         private IEnumerator Electryfy()
@@ -41,12 +42,12 @@ namespace Birds
             base.GetHit();
             if (!JustDied)
             {
+                BirdSoundSorce.Play();
                 IsHit = true;
                 IsOnHorizontal = -1;
                 leftIdleAnimation=hitLeftIdleAnimation;
                 rightIdleAnimation=hitRightIdleAnimation;
-                var newPos = new Vector2Int(Random.Range(1, Grid.n - 1), Random.Range(1, Grid.m - 1));
-                while (newPos==pos) newPos = new Vector2Int(Random.Range(1, Grid.n - 1), Random.Range(1, Grid.m - 1));
+                var newPos = GetRandomPos();
                 MoveBirdToPos(newPos);
 
                 if (Random.Range(0, 2) == 0)
