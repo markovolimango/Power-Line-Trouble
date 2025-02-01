@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         _posX += (int)_inputDir.x;
         _posY -= (int)_inputDir.y;
         transform.position = _grid.NodePositions[_posY, _posX];
+        if (_grid.NodeIsWatched[_posY, _posX]) _grid.GerScared();
         _audioSource.Play();
     }
 }

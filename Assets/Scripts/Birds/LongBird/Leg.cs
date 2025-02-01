@@ -11,13 +11,18 @@ namespace Birds
         [NonSerialized] public Vector2Int JumpDir;
         [NonSerialized] public Vector2Int TargetPos;
 
-        protected override void Start()
+        public override void Start()
         {
             _longBird = transform.parent.GetComponent<LongBird>();
             base.Start();
             _branches = IsOnHorizontal == 1 ? HorizontalBranches : VerticalBranches;
         }
 
+        public override void OnScare()
+        {
+            
+        }
+        
         public override void GetHit()
         {
             if (_longBird.JustDied) return;

@@ -35,6 +35,11 @@ namespace Grid
             ArrangeBirds();
         }
 
+        public void ScareBirds()
+        {
+            foreach (var bird in Birds.ToList()) bird.OnScare();
+        }
+        
         public virtual void SetEdges(Vector2 start, Vector2 end)
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();

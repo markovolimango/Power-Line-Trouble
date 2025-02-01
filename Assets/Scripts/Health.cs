@@ -33,8 +33,8 @@ public class Health : MonoBehaviour
     }
     
     private void GameOver()
-    {
-        Destroy(gameObject);
+    { 
+        //Destroy(gameObject);
     }
     
     public void Heal(int amount)

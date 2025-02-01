@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7219004400745479763, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+  m_Sprite: {fileID: -940721758826341072, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.425}
+  m_Size: {x: 0.12, y: 0.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -109,11 +109,10 @@ MonoBehaviour:
   birdHit:
     m_PersistentCalls:
       m_Calls: []
-  leftIdleAnimation: {fileID: 7400000, guid: 61e43fd43ac2ab24b9fdcc30f9f5074e, type: 2}
-  rightIdleAnimation: {fileID: 7400000, guid: 360d1e2ba8309274e8aed3fb9980c6f6, type: 2}
-  leftFlyingAnimation: {fileID: 7400000, guid: 61e43fd43ac2ab24b9fdcc30f9f5074e, type: 2}
-  rightFlyingAnimation: {fileID: 7400000, guid: 360d1e2ba8309274e8aed3fb9980c6f6, type: 2}
-  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  Grid: {fileID: 0}
+  leftIdleAnimation: {fileID: 7400000, guid: 5b14dce06ed896341967acb225fcc13a, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: e23e553e72430e14a859687c8bf40f96, type: 2}
+  deathAnimation: {fileID: 7400000, guid: 31e06a61d99f76442a5b742013d52138, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: 21008ad4d51e9444796c3afbca8bc25c, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}

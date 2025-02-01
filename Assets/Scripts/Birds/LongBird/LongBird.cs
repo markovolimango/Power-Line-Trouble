@@ -8,7 +8,7 @@ namespace Birds
     {
         private Leg _leftLeg, _rightLeg;
 
-        protected override void Start()
+        public override void Start()
         {
             IsOnHorizontal = Random.Range(0, 2);
             Grid = FindFirstObjectByType<GridManager>();
@@ -34,7 +34,11 @@ namespace Birds
             }
         }
 
-        private void FixedUpdate()
+        public override void OnScare()
+        {
+            
+        }
+        private void FixedUpdate()//ovo treba da se menja nesto
         {
             if (JustDied) return;
             transform.position = (_leftLeg.transform.position + _rightLeg.transform.position) / 2;

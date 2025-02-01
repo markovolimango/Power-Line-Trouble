@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3763262486387449136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1931419, y: 0.07401195, z: -2}
+  m_LocalPosition: {x: -0.57793766, y: -0.44880122, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -106,14 +106,12 @@ MonoBehaviour:
   shitTime: 10
   jumpHeightFactor: 1
   jumpDuration: 0.4
-  pos: {x: 0, y: 0}
+  pos: {x: 3, y: 2}
   birdHit:
     m_PersistentCalls:
       m_Calls: []
   leftIdleAnimation: {fileID: 7400000, guid: 4ed4ef9b1ca3d8e4daa1039cde71eebc, type: 2}
   rightIdleAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
-  leftFlyingAnimation: {fileID: 7400000, guid: 4ed4ef9b1ca3d8e4daa1039cde71eebc, type: 2}
-  rightFlyingAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
   deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: fbf4e38d290d1974b84e065ea2be0247, type: 3}
