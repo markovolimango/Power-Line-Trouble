@@ -117,6 +117,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fbf4e38d290d1974b84e065ea2be0247, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 2077694424219486875}
+  waitTime: 3
 --- !u!114 &5746625337466664553
 MonoBehaviour:
   m_ObjectHideFlags: 0

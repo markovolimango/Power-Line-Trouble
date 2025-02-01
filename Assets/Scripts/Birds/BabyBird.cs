@@ -48,5 +48,10 @@ namespace Birds
             megaShitParticles.Play();
             GetHit();
         }
+
+        public override void OnScare()
+        {
+            Shit();
+        }
     }
 }

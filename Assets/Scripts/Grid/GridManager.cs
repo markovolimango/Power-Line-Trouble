@@ -14,9 +14,11 @@ namespace Grid
         [NonSerialized] public Vector2[,] NodePositions;
         [NonSerialized] public Branch[,] VerticalBranches;
         [NonSerialized] public bool[,] NodeIsWatched;
+        private AudioSource _scareAudioSource;
 
         public void GerScared()
         {
+            _scareAudioSource.Play();
             foreach (var br in HorizontalBranches)
             {
                 br.ScareBirds();
@@ -31,6 +33,7 @@ namespace Grid
         {
             NodePositions = new Vector2[m, n];
             NodeIsWatched = new bool[m, n];
+            _scareAudioSource = GetComponent<AudioSource>();
             var pos = transform.position;
             for (var i = 0; i < m; i++)
             {
