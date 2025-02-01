@@ -193,7 +193,7 @@ namespace Birds
             StartCoroutine(PlayDeathAnimation());
         }
 
-        private IEnumerator PlayDeathAnimation()
+        protected virtual IEnumerator PlayDeathAnimation()
         {
             ExplosionSoundSorce.Play();
             if (Random.Range(0, 2)==0) BirdSoundSorce.Play();

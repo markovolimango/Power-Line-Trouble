@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death3
+  m_Name: DeathSmall
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -28,6 +28,8 @@ AnimationClip:
       value: {fileID: 5904055896126808861, guid: f4b1e1eeaa1decc46bb036540e0202fe, type: 3}
     - time: 0.2
       value: {fileID: 8733028535383333372, guid: f4b1e1eeaa1decc46bb036540e0202fe, type: 3}
+    - time: 0.26666668
+      value: {fileID: 0}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,12 +56,13 @@ AnimationClip:
     - {fileID: -742227964073873347, guid: f4b1e1eeaa1decc46bb036540e0202fe, type: 3}
     - {fileID: 5904055896126808861, guid: f4b1e1eeaa1decc46bb036540e0202fe, type: 3}
     - {fileID: 8733028535383333372, guid: f4b1e1eeaa1decc46bb036540e0202fe, type: 3}
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26666668
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
