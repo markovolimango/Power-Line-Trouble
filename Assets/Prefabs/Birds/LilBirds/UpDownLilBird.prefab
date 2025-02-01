@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 54980399750147904, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+  m_Sprite: {fileID: 8204533467188464480, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.12, y: 0.17}
+  m_Size: {x: 0.3, y: 0.425}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -110,8 +110,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Grid: {fileID: 0}
-  leftIdleAnimation: {fileID: 7400000, guid: 5b14dce06ed896341967acb225fcc13a, type: 2}
-  rightIdleAnimation: {fileID: 7400000, guid: e23e553e72430e14a859687c8bf40f96, type: 2}
+  leftIdleAnimation: {fileID: 7400000, guid: c470659994e6f38438945638bef05dd4, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: a725b997319659b439fbe146b771c90e, type: 2}
   deathAnimation: {fileID: 7400000, guid: 41cfb0c717f225e48af56c72e204ccdf, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: 6b4c2247d4a64884ca0b8e07db9339d6, type: 3}
@@ -991,7 +991,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 75
+      scalar: 65
       minScalar: 10
       maxCurve:
         serializedVersion: 2

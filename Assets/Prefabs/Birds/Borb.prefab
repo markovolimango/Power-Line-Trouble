@@ -110,6 +110,7 @@ MonoBehaviour:
   birdHit:
     m_PersistentCalls:
       m_Calls: []
+  Grid: {fileID: 0}
   leftIdleAnimation: {fileID: 7400000, guid: 4ed4ef9b1ca3d8e4daa1039cde71eebc, type: 2}
   rightIdleAnimation: {fileID: 7400000, guid: 32836bac31a76d746bad85fc36081bd7, type: 2}
   deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
@@ -347,7 +348,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.092034765, b: 0.20754719, a: 1}
+      maxColor: {r: 0.19607845, g: 0.27058825, b: 0.42352945, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -994,7 +995,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 150
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2

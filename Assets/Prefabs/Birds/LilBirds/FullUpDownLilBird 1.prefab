@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6495254273626506027, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+  m_Sprite: {fileID: -6417804743157378213, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,8 +110,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Grid: {fileID: 0}
-  leftIdleAnimation: {fileID: 7400000, guid: 5b14dce06ed896341967acb225fcc13a, type: 2}
-  rightIdleAnimation: {fileID: 7400000, guid: e23e553e72430e14a859687c8bf40f96, type: 2}
+  leftIdleAnimation: {fileID: 7400000, guid: 282822f7c5ebf6c4898e02ce4bbddf4f, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: 1cfefdfc28154a6408ddcb5f710070d3, type: 2}
   deathAnimation: {fileID: 7400000, guid: 41cfb0c717f225e48af56c72e204ccdf, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
@@ -344,7 +344,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.08235294, g: 0.37254903, b: 0.19607845, a: 1}
+      maxColor: {r: 0.26666668, g: 0.26666668, b: 0.26666668, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -991,7 +991,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 75
+      scalar: 65
       minScalar: 10
       maxCurve:
         serializedVersion: 2

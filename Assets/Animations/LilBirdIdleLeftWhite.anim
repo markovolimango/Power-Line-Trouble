@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LilBirdRightIdleBlue
+  m_Name: LilBirdIdleLeftWhite
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 3496524544272933419, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+      value: {fileID: 7467353418533784703, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
     - time: 0.2
-      value: {fileID: 7205782116798855153, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+      value: {fileID: 8075746495054574791, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 3496524544272933419, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
-    - {fileID: 7205782116798855153, guid: f0cb253c127b24b1fbc199789c6b4448, type: 3}
+    - {fileID: 7467353418533784703, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
+    - {fileID: 8075746495054574791, guid: 6b3f756134b67374ea12e9f6316c05a5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
