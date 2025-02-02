@@ -13,6 +13,7 @@ namespace Birds
             _laser = transform.GetChild(0).GetComponent<LineRenderer>();
             pos.y = Random.Range(0, 2) * (Grid.m - 2);
             print(pos);
+            MarkNodesAs(true);
             IsOnHorizontal = 0;
             base.Start();
         }
@@ -74,10 +75,16 @@ namespace Birds
         {
             if (pos.y == 0)
                 for (var i = 1; i < Grid.m; i++)
+                {
                     Grid.NodeIsWatched[i, pos.x] = isWatched;
+                    print(i + " " + pos.x + " " + Grid.NodeIsWatched[i, pos.x]);
+                }
             else
                 for (var i = 0; i < Grid.m - 1; i++)
+                {
                     Grid.NodeIsWatched[i, pos.x] = isWatched;
+                    print(i + " " + pos.x + " " + Grid.NodeIsWatched[i, pos.x]);
+                }
         }
     }
 }

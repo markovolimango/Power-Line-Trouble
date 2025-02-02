@@ -1,3 +1,4 @@
+using DefaultNamespace.GameManager;
 using Grid;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ namespace Birds
         private DJScript _dj;
         private GridManager _grid;
         private int _spawnTimer;
-        
+
 
         private void Start()
         {
@@ -30,8 +31,8 @@ namespace Birds
             }
 
             //var spawnPos = new Vector2Int(3, 3);
-            //var i = Random.Range(0, birdPrefabs.Length);
-            var i = 6;
+            var i = Random.Range(0, birdPrefabs.Length);
+            //var i = 8;
             var birdObject = Instantiate(birdPrefabs[i], transform);
             var bird = birdObject.GetComponent<Bird>();
             bird.Grid = _grid;

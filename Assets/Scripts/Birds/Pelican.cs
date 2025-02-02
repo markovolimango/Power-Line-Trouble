@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using DefaultNamespace.GameManager;
 using UnityEngine;
 
 namespace Birds
@@ -7,21 +7,21 @@ namespace Birds
     public class Pelican : Bird
     {
         public int healAmount;
-        private Health _carHealth;
-        private Vector2Int _jumpDir;
         public ParticleSystem water;
         public ParticleSystem waterDeath;
+        private Health _carHealth;
+        private Vector2Int _jumpDir;
         private bool goingLeft;
-        
+
         public override void Start()
         {
             IsOnHorizontal = 0;
             base.Start();
-            if(goingLeft) Animator.Play(leftIdleAnimation.name);
+            if (goingLeft) Animator.Play(leftIdleAnimation.name);
             else Animator.Play(rightIdleAnimation.name);
             water.Play();
         }
-        
+
 
         public override void GetHit()
         {
@@ -41,17 +41,15 @@ namespace Birds
                 print("left");
                 _jumpDir = Vector2Int.left;
                 goingLeft = true;
-                return new Vector2Int(Grid.n-1, Random.Range(0, Grid.m-1));
+                return new Vector2Int(Grid.n - 1, Random.Range(0, Grid.m - 1));
             }
-            else
-            {
-                print("right");
-                _jumpDir = Vector2Int.right;
-                goingLeft = false;
-                return new Vector2Int(0, Random.Range(0, Grid.m-1));
-            }
+
+            print("right");
+            _jumpDir = Vector2Int.right;
+            goingLeft = false;
+            return new Vector2Int(0, Random.Range(0, Grid.m - 1));
         }
-        
+
         public override void OnTsk()
         {
             if (JustDied) return;
@@ -63,11 +61,13 @@ namespace Birds
                 else if (IsOnHorizontal == 0) VerticalBranches[pos.y, pos.x].DetachBird(this);
                 var start = transform.position;
                 Vector3 end;
-                if(goingLeft) end = transform.position + new Vector3(-1.5f, 0);
+                if (goingLeft) end = transform.position + new Vector3(-1.5f, 0);
                 else end = transform.position + new Vector3(1.5f, 0);
-                StartCoroutine(MoveInSmoothSlurpeLineCoroutine(start, end, (end - start).magnitude * jumpHeightFactor, jumpDuration));
+                StartCoroutine(MoveInSmoothSlurpeLineCoroutine(start, end, (end - start).magnitude * jumpHeightFactor,
+                    jumpDuration));
                 StartCoroutine(ByeByePelican());
             }
+
             MoveBirdToPos(pos + _jumpDir);
         }
 

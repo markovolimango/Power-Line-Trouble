@@ -1,4 +1,5 @@
 using DefaultNamespace;
+using DefaultNamespace.GameManager;
 using UnityEngine;
 
 public class ShitKiller : MonoBehaviour
