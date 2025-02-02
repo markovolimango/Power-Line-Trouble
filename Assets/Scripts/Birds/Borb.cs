@@ -22,6 +22,8 @@ namespace Birds
             Electricity.gameObject.SetActive(false);
             ElectricityAnimator=Electricity.GetComponent<Animator>();
             IsHit = false;
+            if (Random.Range(0, 2) == 0) Animator.Play(leftIdleAnimation.name);
+            else Animator.Play(rightIdleAnimation.name);
         }
 
         public override void OnBoom()
