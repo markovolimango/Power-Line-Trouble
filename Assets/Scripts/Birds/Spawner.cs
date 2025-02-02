@@ -1,3 +1,4 @@
+using DefaultNamespace.GameManager;
 using System.Collections.Generic;
 using DefaultNamespace.GameManager;
 using Grid;
@@ -24,6 +25,7 @@ namespace Birds
         private int _currentLvl;
         private int _birdsIndex;
         
+
 
         private void Start()
         {
@@ -85,6 +87,7 @@ namespace Birds
             _dj.boom.AddListener(bird.OnBoom);
             bird.birdHit.AddListener(_combo.OnBirdHit);
             bird.pos = spawnPos;
+
             _spawnTimer = spawnTime;
         }
     }

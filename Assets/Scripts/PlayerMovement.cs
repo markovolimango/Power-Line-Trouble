@@ -1,16 +1,16 @@
+using DefaultNamespace.GameManager;
 using Grid;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ParticleSystem particles;
+    public ComboMeter comboMeter;
     private AudioSource _audioSource;
     private GridManager _grid;
     private Vector2 _inputDir;
     private bool _isStopped;
     private int _posY, _posX;
-    public ParticleSystem particles;
-    public ComboMeter comboMeter;
 
     private void Start()
     {
@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
             _inputDir = Vector2.left;
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             _inputDir = Vector2.right;
-        
+
         var mainModule = particles.main;
-        mainModule.startSpeed = Mathf.Min(10+comboMeter.Combo,30);
+        mainModule.startSpeed = Mathf.Min(10 + comboMeter.Combo, 30);
     }
 
     public void OnBoom()
