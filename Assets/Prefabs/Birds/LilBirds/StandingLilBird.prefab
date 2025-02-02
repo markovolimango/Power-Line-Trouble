@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3888dfec987b33f49b1815a4bb999096, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 21008ad4d51e9444796c3afbca8bc25c, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 8573941483953621790}
+  scoreIncrease: 5
 --- !u!95 &8468884349710733892
 Animator:
   serializedVersion: 5
@@ -227,7 +228,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0

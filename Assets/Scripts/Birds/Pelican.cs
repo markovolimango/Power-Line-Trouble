@@ -11,12 +11,15 @@ namespace Birds
         private Vector2Int _jumpDir;
         public ParticleSystem water;
         public ParticleSystem waterDeath;
+        private bool goingLeft;
         
         public override void Start()
         {
             IsOnHorizontal = 0;
             base.Start();
-            _jumpDir = Vector2Int.left;
+            if(goingLeft) Animator.Play(leftIdleAnimation.name);
+            else Animator.Play(rightIdleAnimation.name);
+            water.Play();
         }
         
 
@@ -25,27 +28,43 @@ namespace Birds
             if (JustDied) return;
             _carHealth = GameObject.FindGameObjectWithTag("Car").GetComponent<Health>();
             _carHealth.Heal(healAmount);
-            water.emissionRate = 0;
+            var emission = water.emission;
+            emission.rateOverTime = 0;
             waterDeath.Play();
             base.GetHit();
         }
 
         public override Vector2Int GetRandomPos()
         {
-            return new Vector2Int(Grid.n-1, Random.Range(0, Grid.m-1));
+            if (Random.Range(0, 2) == 0)
+            {
+                print("left");
+                _jumpDir = Vector2Int.left;
+                goingLeft = true;
+                return new Vector2Int(Grid.n-1, Random.Range(0, Grid.m-1));
+            }
+            else
+            {
+                print("right");
+                _jumpDir = Vector2Int.right;
+                goingLeft = false;
+                return new Vector2Int(0, Random.Range(0, Grid.m-1));
+            }
         }
         
         public override void OnTsk()
         {
             if (JustDied) return;
-            if (pos.x == 0)
+            if ((pos.x == 0 && goingLeft) || (pos.x == Grid.n - 1 && !goingLeft))
             {
                 JustDied = true;
                 if (IsOnHorizontal == 1)
                     HorizontalBranches[pos.y, pos.x].DetachBird(this);
                 else if (IsOnHorizontal == 0) VerticalBranches[pos.y, pos.x].DetachBird(this);
                 var start = transform.position;
-                var end = transform.position + new Vector3(-1.5f, 0);
+                Vector3 end;
+                if(goingLeft) end = transform.position + new Vector3(-1.5f, 0);
+                else end = transform.position + new Vector3(1.5f, 0);
                 StartCoroutine(MoveInSmoothSlurpeLineCoroutine(start, end, (end - start).magnitude * jumpHeightFactor, jumpDuration));
                 StartCoroutine(ByeByePelican());
             }

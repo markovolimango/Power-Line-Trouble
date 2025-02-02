@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 public class ShitKiller : MonoBehaviour
@@ -16,7 +17,7 @@ public class ShitKiller : MonoBehaviour
         if (shit.layer != shitLayer)
             return;
 
-        _carHealth.Damage(1);
+        _carHealth.Damage(shit.GetComponent<Shit>().damage);
         Destroy(shit);
     }
 }

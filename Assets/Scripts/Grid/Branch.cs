@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
+using DefaultNamespace.GameManager;
 using Shaders;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Grid
 {
@@ -16,10 +18,11 @@ namespace Grid
         private int _spriteIndex;
         private SpriteRenderer _spriteRenderer, _electricitySpriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
-        [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
         protected PulseShaderController PulseShaderController;
-//protected ParticleSystem ElectricityParticles;
-        
+        [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
+        public Score Score;
+        public ComboMeter comboMeter;
+
         private void Start()
         {
             PulseShaderController = GetComponent<PulseShaderController>();
@@ -27,7 +30,8 @@ namespace Grid
             _electricitySpriteRenderer = _electricity.GetComponent<SpriteRenderer>();
             _electricity = transform.Find("Electricity");
             _electricity.gameObject.SetActive(false);
-            //ElectricityParticles = transform.Find("WireParticles").GetComponent<ParticleSystem>();
+            Score=GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
+            comboMeter=GameObject.FindGameObjectWithTag("Car").GetComponent<ComboMeter>();
         }
 
         private void FixedUpdate()
@@ -39,7 +43,7 @@ namespace Grid
         {
             foreach (var bird in Birds.ToList()) bird.OnScare();
         }
-        
+
         public virtual void SetEdges(Vector2 start, Vector2 end)
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -47,6 +51,7 @@ namespace Grid
             _spriteRenderer.sprite = sprites[0];
             StartPos = start;
             MidPos = (start + end) / 2;
+            MidPos += Vector2.down * 0.05f;
             EndPos = end;
         }
 
@@ -79,6 +84,9 @@ namespace Grid
             //print("KILLING");
             StartCoroutine(Electrify());
             PulseShaderController.Pulse(3);
+            int scoreToAdd = 0;
+            foreach (var bird in Birds.ToList()) scoreToAdd += bird.scoreIncrease;
+            Score.AddScore((scoreToAdd+comboMeter.Combo)*Birds.Count);
             foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 

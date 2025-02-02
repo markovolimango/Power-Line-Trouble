@@ -1,17 +1,22 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class ComboMeter : MonoBehaviour
 {
     public int loseTime;
     private AudioSource _audioSource;
-    private int _combo;
+    [NonSerialized] public int Combo;
     private int _loseTimer;
     private GameObject _player;
+    public TMP_Text comboText;
 
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        _audioSource = GetComponent<AudioSource>();
+        comboText.text = "";
+        _loseTimer = 0;
+
     }
 
     public void OnBoom()
@@ -21,20 +26,14 @@ public class ComboMeter : MonoBehaviour
             _loseTimer--;
             return;
         }
-
-        //_player.transform.localScale = Vector3.one * 0.5f;
-        if (_combo != 0)
-        {
-            _combo = 0;
-            _audioSource.Play();
-        }
+        comboText.text = "";
+        Combo = 0;
     }
 
     public void OnBirdHit()
     {
-        _combo++;
+        Combo++;
         _loseTimer = loseTime;
-        if (_combo % 10 == 0) ;
-        //_player.transform.localScale *= 1.2f;
+        comboText.text = Combo.ToString();
     }
 }
