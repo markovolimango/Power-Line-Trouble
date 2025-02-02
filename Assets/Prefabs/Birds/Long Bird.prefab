@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65092e9965e448f8be69ebff1405a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: a83786eaf52d2e04cb9d704c71296140, type: 3}
   shitTime: 10
   jumpHeightFactor: -1
   jumpDuration: 0.35
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65092e9965e448f8be69ebff1405a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: e7a4bd839767343d882f364a7efba780, type: 3}
+  shit: {fileID: 3220105205961607354, guid: a83786eaf52d2e04cb9d704c71296140, type: 3}
   shitTime: 10
   jumpHeightFactor: -1
   jumpDuration: 0.35
