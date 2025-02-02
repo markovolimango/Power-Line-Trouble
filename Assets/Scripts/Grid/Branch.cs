@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Birds;
+using DefaultNamespace.GameManager;
 using Shaders;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Grid
 {
@@ -17,9 +19,9 @@ namespace Grid
         private SpriteRenderer _spriteRenderer, _electricitySpriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
         protected PulseShaderController PulseShaderController;
-
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
-//protected ParticleSystem ElectricityParticles;
+        public Score Score;
+        public ComboMeter comboMeter;
 
         private void Start()
         {
@@ -28,7 +30,8 @@ namespace Grid
             _electricitySpriteRenderer = _electricity.GetComponent<SpriteRenderer>();
             _electricity = transform.Find("Electricity");
             _electricity.gameObject.SetActive(false);
-            //ElectricityParticles = transform.Find("WireParticles").GetComponent<ParticleSystem>();
+            Score=GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
+            comboMeter=GameObject.FindGameObjectWithTag("Car").GetComponent<ComboMeter>();
         }
 
         private void FixedUpdate()
@@ -81,6 +84,9 @@ namespace Grid
             //print("KILLING");
             StartCoroutine(Electrify());
             PulseShaderController.Pulse(3);
+            int scoreToAdd = 0;
+            foreach (var bird in Birds.ToList()) scoreToAdd += bird.scoreIncrease;
+            Score.AddScore((scoreToAdd+comboMeter.Combo)*Birds.Count);
             foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 

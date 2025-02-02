@@ -114,7 +114,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
   explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
   particles: {fileID: 0}
-  scoreIncrease: 0
+  scoreIncrease: 1
 --- !u!95 &3322630079160587954
 Animator:
   serializedVersion: 5
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b311cf977130a5b459bacdad6d8504b2, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 0}
-  scoreIncrease: 10
+  scoreIncrease: 0
 --- !u!95 &8668982076249371037
 Animator:
   serializedVersion: 5
@@ -405,7 +405,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
   explosionSound: {fileID: 8300000, guid: a421dd7e4b389d346be5bbaeeddd7c02, type: 3}
   particles: {fileID: 0}
-  scoreIncrease: 0
+  scoreIncrease: 1
 --- !u!95 &7682119240637697557
 Animator:
   serializedVersion: 5
