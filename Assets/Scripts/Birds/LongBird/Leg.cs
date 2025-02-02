@@ -26,6 +26,7 @@ namespace Birds
         public override void GetHit()
         {
             if (_longBird.JustDied) return;
+            _longBird.ShitTimer = _longBird.shitTime;
             _longBird.birdHit.Invoke();
             TargetPos = pos + 2 * JumpDir;
             if (TargetPos.x < 0 || TargetPos.x >= Grid.n || TargetPos.y < 0 || TargetPos.y >= Grid.m)

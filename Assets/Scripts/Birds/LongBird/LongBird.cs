@@ -11,6 +11,7 @@ namespace Birds
 
         public override void Start()
         {
+            ShitTimer = shitTime;
             IsOnHorizontal = Random.Range(0, 2);
             Grid = FindFirstObjectByType<GridManager>();
             _pulseShaderController = GetComponent<PulseShaderController>();

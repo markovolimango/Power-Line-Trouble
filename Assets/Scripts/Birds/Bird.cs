@@ -33,7 +33,7 @@ namespace Birds
         protected Branch[,] HorizontalBranches;
         [NonSerialized] public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
         [NonSerialized] public bool JustDied;
-        protected int ShitTimer;
+        protected internal int ShitTimer;
         protected Branch[,] VerticalBranches;
         public int scoreIncrease;
         protected Score Score;
