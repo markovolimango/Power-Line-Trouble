@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections;
-using Grid;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 namespace Birds
 {
-    public class BabyBird:Bird
+    public class BabyBird : Bird
     {
         public float timeBetweenSounds;
-        private float _timer = 0f;
         public float speedUpRate;
         public AudioClip megaShitSound;
         public float animationSpeedIncrease;
         public ParticleSystem megaShitParticles;
+        private camer _camer;
+        private float _timer;
 
         public override void Start()
         {
+            _camer = FindFirstObjectByType<camer>();
             base.Start();
             var emission = megaShitParticles.emission;
             emission.rateOverTime = 0;
@@ -25,7 +23,7 @@ namespace Birds
 
         private void FixedUpdate()
         {
-            if(JustDied) return;
+            if (JustDied) return;
             _timer += Time.fixedDeltaTime;
             if (_timer >= timeBetweenSounds)
             {
@@ -49,6 +47,7 @@ namespace Birds
             emission.rateOverTime = 200;
             megaShitParticles.Play();
             base.Shit();
+            _camer.ShakeIt(3f, 0.3f);
             GetHit();
         }
 
