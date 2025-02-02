@@ -4949,6 +4949,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}
   explosionSound: {fileID: 8300000, guid: 0858fcdb3cfab7c46981d65b52bbcd29, type: 3}
   particles: {fileID: 2077694424219486875}
+  scoreIncrease: 10
   healAmount: 20
   water: {fileID: 82575352184839565}
   waterDeath: {fileID: 6089090125416396738}
@@ -4965,7 +4966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
-  pulseSpeed: 5
+  pulseSpeed: 10
   pulseDuration: 0.3
   pulseInterval: 0.3
 --- !u!95 &506580851068272781

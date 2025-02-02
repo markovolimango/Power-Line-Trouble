@@ -4949,6 +4949,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 21008ad4d51e9444796c3afbca8bc25c, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 1983373021359303321}
+  scoreIncrease: 10
   timeBetweenSounds: 1
   speedUpRate: 0.86
   megaShitSound: {fileID: 8300000, guid: 0504ab27535cc0948bb5fdd3e6513d46, type: 3}

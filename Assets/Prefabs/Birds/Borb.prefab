@@ -119,6 +119,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eb479526402f4064d8176a40d68d105a, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 5119402281004654435}
+  scoreIncrease: 10
   hitLeftIdleAnimation: {fileID: 7400000, guid: 66d5cf310cfb6634395955337c9e47cf, type: 2}
   hitRightIdleAnimation: {fileID: 7400000, guid: 67e9af9a734ecf740aefac5ef621e69d, type: 2}
 --- !u!95 &3603417635967085390

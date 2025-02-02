@@ -117,6 +117,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9a4712396f3ef7478dc7770e7e272f8, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 8242135257592556852}
+  scoreIncrease: 5
 --- !u!95 &-2885592311235954728
 Animator:
   serializedVersion: 5

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace.GameManager;
 using Grid;
 using Shaders;
 using UnityEngine;
@@ -34,6 +35,8 @@ namespace Birds
         [NonSerialized] public bool JustDied;
         protected int ShitTimer;
         protected Branch[,] VerticalBranches;
+        public int scoreIncrease;
+        protected Score Score;
 
         public virtual void Start()
         {
@@ -54,6 +57,7 @@ namespace Birds
             if (Random.Range(0, 2) == 0) Animator.Play(leftIdleAnimation.name);
             else Animator.Play(rightIdleAnimation.name);
             Animator.Play(leftIdleAnimation.name);
+            Score=GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
         }
 
         public virtual Vector2Int GetRandomPos()
@@ -193,6 +197,7 @@ namespace Birds
         public virtual void Die()
         {
             JustDied = true;
+            Score.AddScore(scoreIncrease);
             StartCoroutine(PlayDeathAnimation());
         }
 

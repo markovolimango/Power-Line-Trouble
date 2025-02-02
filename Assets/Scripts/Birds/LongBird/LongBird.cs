@@ -1,3 +1,4 @@
+using DefaultNamespace.GameManager;
 using Grid;
 using Shaders;
 using UnityEngine;
@@ -32,6 +33,7 @@ namespace Birds
                 _rightLeg.pos = pos + Vector2Int.up;
                 _rightLeg.JumpDir = Vector2Int.down;
             }
+            Score=GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
         }
 
         public override void OnScare()
@@ -60,6 +62,7 @@ namespace Birds
             JustDied = true;
             _leftLeg.Die();
             _rightLeg.Die();
+            Score.AddScore(scoreIncrease);
             Destroy(gameObject);
         }
     }
