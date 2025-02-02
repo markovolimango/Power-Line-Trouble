@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e07c08a20c9f4d96a26099ae8ef8a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseTime: 10
+  loseTime: 3
+  comboText: {fileID: 0}
