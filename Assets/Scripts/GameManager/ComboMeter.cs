@@ -2,38 +2,41 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class ComboMeter : MonoBehaviour
+namespace DefaultNamespace.GameManager
 {
-    public int loseTime;
-    private AudioSource _audioSource;
-    [NonSerialized] public int Combo;
-    private int _loseTimer;
-    private GameObject _player;
-    public TMP_Text comboText;
-
-    private void Start()
+    public class ComboMeter : MonoBehaviour
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
-        comboText.text = "";
-        _loseTimer = 0;
+        public int loseTime;
+        public TMP_Text comboText;
+        private AudioSource _audioSource;
+        private int _loseTimer;
+        private GameObject _player;
+        [NonSerialized] public int Combo;
 
-    }
-
-    public void OnBoom()
-    {
-        if (_loseTimer > 0)
+        private void Start()
         {
-            _loseTimer--;
-            return;
+            _player = GameObject.FindGameObjectWithTag("Player");
+            comboText.text = "";
+            _loseTimer = 0;
         }
-        comboText.text = "";
-        Combo = 0;
-    }
 
-    public void OnBirdHit()
-    {
-        Combo++;
-        _loseTimer = loseTime;
-        comboText.text = Combo.ToString();
+        public void OnBoom()
+        {
+            if (_loseTimer > 0)
+            {
+                _loseTimer--;
+                return;
+            }
+
+            comboText.text = "";
+            Combo = 0;
+        }
+
+        public void OnBirdHit()
+        {
+            Combo++;
+            _loseTimer = loseTime;
+            comboText.text = Combo.ToString();
+        }
     }
 }
