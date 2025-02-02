@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: 2a4fc8174af5b1e49b09d53537a6a782
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: longbirdcomplete_Frame_0
+    originalName: 
+    pivot: {x: -0.14285715, y: -2.647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 166
+      y: 46
+      width: 42
+      height: 17
+    spriteID: 616569b8446265d4f8fd22da216780af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 166, y: 46}
+  - name: longbirdcomplete_Frame_1
+    originalName: 
+    pivot: {x: -0.14285715, y: -2.4444447}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 136
+      y: 4
+      width: 42
+      height: 18
+    spriteID: 4fbac146fe4c53a429e6060476138e62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 136, y: 4}
+  - name: longbirdcomplete_Frame_2
+    originalName: 
+    pivot: {x: -0.15384616, y: -2.4444447}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 98
+      width: 39
+      height: 18
+    spriteID: 5acbcfa64c7c34042b49064f8792a21b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 98}
+  - name: longbirdcomplete_Frame_3
+    originalName: 
+    pivot: {x: -0.1935484, y: -0.67567563}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 46
+      width: 31
+      height: 37
+    spriteID: a5564b65c924c5a4aa2cb2b35d8bf9dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 46}
+  - name: longbirdcomplete_Frame_4
+    originalName: 
+    pivot: {x: 0.14285722, y: -0.1764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 14
+      height: 51
+    spriteID: a9533b51b5b251a4ba838f268604c30a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  - name: longbirdcomplete_Frame_5
+    originalName: 
+    pivot: {x: 0.74999994, y: -0.7647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 36
+      height: 34
+    spriteID: 3fe251f4695f1e14fb0bce1ee50d640a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: longbirdcomplete_Frame_6
+    originalName: 
+    pivot: {x: 0.76315796, y: -2.263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 4
+      width: 38
+      height: 19
+    spriteID: df96f0575278db94b8c4bee6f31b38f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 4}
+  - name: longbirdcomplete_Frame_7
+    originalName: 
+    pivot: {x: 0.7857142, y: -2.5882354}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 73
+      width: 42
+      height: 17
+    spriteID: e1ae324ba093d9546adce3fb0760766b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 73}
+  - name: longbirdcomplete_Frame_8
+    originalName: 
+    pivot: {x: 0.76315796, y: -2.263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 46
+      width: 38
+      height: 19
+    spriteID: 76d9762b09b3cf34db11c155c9c93d5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 46}
+  - name: longbirdcomplete_Frame_9
+    originalName: 
+    pivot: {x: 0.74999994, y: -0.7647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 4
+      width: 36
+      height: 34
+    spriteID: 6f374ab253f2e0847859b9275e61003c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 4}
+  - name: longbirdcomplete_Frame_10
+    originalName: 
+    pivot: {x: -0.21739136, y: -0.17999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 23
+      height: 50
+    spriteID: cf4ba70966b22ae4290315cb27caa350
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 46}
+  - name: longbirdcomplete_Frame_11
+    originalName: 
+    pivot: {x: -0.153846, y: -0.15686275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 91
+      width: 13
+      height: 51
+    spriteID: 2923a93eb0ac5de468752d5e83e2f5ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 91}
+  - name: longbirdcomplete_Frame_12
+    originalName: 
+    pivot: {x: -0.153846, y: -0.17999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 124
+      width: 13
+      height: 50
+    spriteID: b736d804ec4b0864f8177040e6d7c6ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 124}
+  - name: longbirdcomplete_Frame_13
+    originalName: 
+    pivot: {x: -0.14285715, y: -2.647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 73
+      width: 42
+      height: 17
+    spriteID: 64f4028e57514a0418ca858808e8dd23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 73}
+  - name: longbirdcomplete_Frame_14
+    originalName: 
+    pivot: {x: -0.15789475, y: -2.3157897}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 46
+      width: 38
+      height: 19
+    spriteID: 9482ff5f5be833c4fb0a41c2beb6fcbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 46}
+  - name: longbirdcomplete_Frame_15
+    originalName: 
+    pivot: {x: -0.13888891, y: -0.7941177}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 4
+      width: 36
+      height: 34
+    spriteID: 94997defcacd4ce44872e5a8a682a1ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 4}
+  - name: longbirdcomplete_Frame_16
+    originalName: 
+    pivot: {x: 0.60869557, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 23
+      height: 50
+    spriteID: 3f478662eda6eb0448b92db52c247205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: longbirdcomplete_Frame_17
+    originalName: 
+    pivot: {x: 0, y: -0.15686275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 150
+      width: 13
+      height: 51
+    spriteID: 0b21c71b03470e946a493396d511c174
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 150}
+  - name: longbirdcomplete_Frame_18
+    originalName: 
+    pivot: {x: 0, y: -0.17999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 124
+      width: 13
+      height: 50
+    spriteID: 6b9678f4ed02b2144ab0ec74dc3498aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 124}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1254568812
+    name: longbirdcomplete
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: longbirdcomplete_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 45
+        width: 42
+        height: 17
+      spriteId: 616569b8446265d4f8fd22da216780af
+    - name: longbirdcomplete_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 44
+        width: 42
+        height: 18
+      spriteId: 4fbac146fe4c53a429e6060476138e62
+    - name: longbirdcomplete_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 44
+        width: 39
+        height: 18
+      spriteId: 5acbcfa64c7c34042b49064f8792a21b
+    - name: longbirdcomplete_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 25
+        width: 31
+        height: 37
+      spriteId: a5564b65c924c5a4aa2cb2b35d8bf9dc
+    - name: longbirdcomplete_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 48
+        y: 9
+        width: 14
+        height: 51
+      spriteId: a9533b51b5b251a4ba838f268604c30a
+    - name: longbirdcomplete_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 26
+        width: 36
+        height: 34
+      spriteId: 3fe251f4695f1e14fb0bce1ee50d640a
+    - name: longbirdcomplete_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 21
+        y: 43
+        width: 38
+        height: 19
+      spriteId: df96f0575278db94b8c4bee6f31b38f4
+    - name: longbirdcomplete_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 17
+        y: 44
+        width: 42
+        height: 17
+      spriteId: e1ae324ba093d9546adce3fb0760766b
+    - name: longbirdcomplete_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 21
+        y: 43
+        width: 38
+        height: 19
+      spriteId: 76d9762b09b3cf34db11c155c9c93d5b
+    - name: longbirdcomplete_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 23
+        y: 26
+        width: 36
+        height: 34
+      spriteId: 6f374ab253f2e0847859b9275e61003c
+    - name: longbirdcomplete_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 9
+        width: 23
+        height: 50
+      spriteId: cf4ba70966b22ae4290315cb27caa350
+    - name: longbirdcomplete_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 52
+        y: 8
+        width: 13
+        height: 51
+      spriteId: 2923a93eb0ac5de468752d5e83e2f5ab
+    - name: longbirdcomplete_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 52
+        y: 9
+        width: 13
+        height: 50
+      spriteId: b736d804ec4b0864f8177040e6d7c6ca
+    - name: longbirdcomplete_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 45
+        width: 42
+        height: 17
+      spriteId: 64f4028e57514a0418ca858808e8dd23
+    - name: longbirdcomplete_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 56
+        y: 44
+        width: 38
+        height: 19
+      spriteId: 9482ff5f5be833c4fb0a41c2beb6fcbb
+    - name: longbirdcomplete_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 27
+        width: 36
+        height: 34
+      spriteId: 94997defcacd4ce44872e5a8a682a1ef
+    - name: longbirdcomplete_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 36
+        y: 10
+        width: 23
+        height: 50
+      spriteId: 3f478662eda6eb0448b92db52c247205
+    - name: longbirdcomplete_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 50
+        y: 8
+        width: 13
+        height: 51
+      spriteId: 0b21c71b03470e946a493396d511c174
+    - name: longbirdcomplete_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 50
+        y: 9
+        width: 13
+        height: 50
+      spriteId: 6b9678f4ed02b2144ab0ec74dc3498aa
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 100, y: 80}
