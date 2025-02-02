@@ -4949,7 +4949,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}
   explosionSound: {fileID: 8300000, guid: 0858fcdb3cfab7c46981d65b52bbcd29, type: 3}
   particles: {fileID: 2077694424219486875}
-  healAmount: 100
+  healAmount: 20
   water: {fileID: 82575352184839565}
   waterDeath: {fileID: 6089090125416396738}
 --- !u!114 &5746625337466664553

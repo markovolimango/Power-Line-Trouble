@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3275083607907913391}
   - component: {fileID: -8020157764070074217}
   - component: {fileID: 6883637985826579222}
+  - component: {fileID: 1396677065092388339}
   m_Layer: 12
   m_Name: ShitBig
   m_TagString: Untagged
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.04, y: 0.06}
+    oldSize: {x: 0.1, y: 0.15}
     newSize: {x: 0.02, y: 0.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -255,3 +256,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1396677065092388339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3220105205961607354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd4dddb073545e6b599e10dc140f132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3

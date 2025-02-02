@@ -47,6 +47,7 @@ namespace Birds
             ExplosionSoundSorce.clip = megaShitSound;
             megaShitParticles.emissionRate = 1000;
             megaShitParticles.Play();
+            base.Shit();
             GetHit();
         }
 

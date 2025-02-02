@@ -1,37 +1,45 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
+using Slider = UnityEngine.UI.Slider;
 
 public class Health : MonoBehaviour
 {
     public int maxhp;
     public List<Sprite> sprites;
     public int hpToSpriteChange;
-    private int _currentSpriteIdx;
     private int _hp;
     private SpriteRenderer _spriteRenderer;
+    public Slider Slider;
+    public Gradient Gradient;
+    public Image Fill;
     //public RedCornersShaderController redCorners;
     
     
     private void Start()
     {
-        _hp = maxhp;
+        SetMaxHealth(maxhp);
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = sprites[0];
-        _currentSpriteIdx = 0;
         //redCorners = FindFirstObjectByType<RedCornersShaderController>();
         //redCorners.PlayPulseEffect( 3f);
+    }
+
+    public void SetMaxHealth(int health)
+    {
+        Slider.maxValue = health;
+        Slider.value = health;
+        Fill.color=Gradient.Evaluate(1f);
+        _hp = maxhp;
     }
 
     public void Damage(int amount)
     {
         _hp -= amount;
-        if (_hp <= maxhp-(_currentSpriteIdx+1)*hpToSpriteChange && _currentSpriteIdx < sprites.Count-1)
-        {
-            _currentSpriteIdx++;
-            _spriteRenderer.sprite = sprites[_currentSpriteIdx];
-        }
-
+        SetHealth();
         if (_hp <= 0) GameOver();
     }
     
@@ -43,6 +51,13 @@ public class Health : MonoBehaviour
     public void Heal(int amount)
     {
         _hp = Math.Min(_hp + amount, maxhp);
-        transform.localScale = Vector3.one * ((float)_hp / maxhp);
+        SetHealth();
+    }
+
+    private void SetHealth()
+    {
+        Slider.value = _hp;
+        Fill.color = Gradient.Evaluate(Slider.normalizedValue);
+        _spriteRenderer.sprite = sprites[(maxhp-_hp)/15];
     }
 }

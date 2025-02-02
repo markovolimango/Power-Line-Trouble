@@ -4933,7 +4933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057aa977a50b420283a744470723fc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shit: {fileID: 3220105205961607354, guid: f20525ae00af6d5428e91d92d05ca1d7, type: 3}
+  shit: {fileID: 3220105205961607354, guid: 6baa3af11bde2fa4d99b85a1a63fdd35, type: 3}
   shitTime: 20
   jumpHeightFactor: 0.4
   jumpDuration: 0.2

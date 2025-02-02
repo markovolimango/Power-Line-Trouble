@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6883637985826579222}
   - component: {fileID: 8172273719553428281}
   m_Layer: 12
-  m_Name: Shit
+  m_Name: MegaShit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,4 +268,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd4dddb073545e6b599e10dc140f132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 20
