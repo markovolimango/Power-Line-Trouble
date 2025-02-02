@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 public class OptionsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-	public Dropdown resolutionDropdown;
+	public TMP_Dropdown resolutionDropdown;
 	Resolution[] _resolutions;
 	void Start()
     {
@@ -30,7 +31,7 @@ public class OptionsMenu : MonoBehaviour
 		resolutionDropdown.AddOptions(options);
 		resolutionDropdown.value = currentResolutionIndex;
 		resolutionDropdown.RefreshShownValue();
-
+		Debug.Log("uspeo");
 		gameObject.SetActive(false);
 	}
 
