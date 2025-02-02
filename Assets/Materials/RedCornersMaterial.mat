@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DesaturationMaterial
-  m_Shader: {fileID: 4800000, guid: 000006d40bd899841833f8ce00ef864b, type: 3}
+  m_Name: RedCornersMaterial
+  m_Shader: {fileID: 4800000, guid: 861d49f52015e214f8fc3157fc957ddc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -41,8 +41,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DesaturationAmount: 0.851
     - _EnableExternalAlpha: 0
+    - _Health: 1
+    - _PulseSpeed: 2
+    - _PulseStrength: 0.5
+    - _RedIntensity: 0.8
+    - _TimeScale: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

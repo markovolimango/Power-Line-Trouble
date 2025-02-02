@@ -25,7 +25,8 @@ namespace Birds
             if (JustDied) return;
             _carHealth = GameObject.FindGameObjectWithTag("Car").GetComponent<Health>();
             _carHealth.Heal(healAmount);
-            water.emissionRate = 0;
+            var emission = water.emission;
+            emission.rateOverTime = 0;
             waterDeath.Play();
             base.GetHit();
         }

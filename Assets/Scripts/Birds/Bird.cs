@@ -169,6 +169,7 @@ namespace Birds
         
         public virtual void OnScare()
         {
+            particles.Play();
             var newPos = GetRandomPos();
             MoveBirdToPos(newPos);
         }

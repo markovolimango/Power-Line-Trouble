@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     private int _currentSpriteIdx;
     private int _hp;
     private SpriteRenderer _spriteRenderer;
+    //public RedCornersShaderController redCorners;
     
     
     private void Start()
@@ -18,6 +19,8 @@ public class Health : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = sprites[0];
         _currentSpriteIdx = 0;
+        //redCorners = FindFirstObjectByType<RedCornersShaderController>();
+        //redCorners.PlayPulseEffect( 3f);
     }
 
     public void Damage(int amount)

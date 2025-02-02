@@ -18,7 +18,8 @@ namespace Birds
         public override void Start()
         {
             base.Start();
-            megaShitParticles.emissionRate = 0;
+            var emission = megaShitParticles.emission;
+            emission.rateOverTime = 0;
             BirdSoundSorce.PlayOneShot(BirdSoundSorce.clip);
         }
 
