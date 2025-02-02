@@ -16,10 +16,11 @@ namespace Grid
         private int _spriteIndex;
         private SpriteRenderer _spriteRenderer, _electricitySpriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
-        [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
         protected PulseShaderController PulseShaderController;
+
+        [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
 //protected ParticleSystem ElectricityParticles;
-        
+
         private void Start()
         {
             PulseShaderController = GetComponent<PulseShaderController>();
@@ -39,7 +40,7 @@ namespace Grid
         {
             foreach (var bird in Birds.ToList()) bird.OnScare();
         }
-        
+
         public virtual void SetEdges(Vector2 start, Vector2 end)
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -47,6 +48,7 @@ namespace Grid
             _spriteRenderer.sprite = sprites[0];
             StartPos = start;
             MidPos = (start + end) / 2;
+            MidPos += Vector2.down * 0.05f;
             EndPos = end;
         }
 

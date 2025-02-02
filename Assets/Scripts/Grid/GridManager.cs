@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Grid
 {
@@ -10,25 +9,12 @@ namespace Grid
         public float distanceX, distanceY, skretanje;
         public GameObject nodePrefab;
         public GameObject horizontalBranchPrefab, verticalBranchPrefab;
+        private AudioSource _scareAudioSource;
         [NonSerialized] public Branch[,] HorizontalBranches;
+        [NonSerialized] public bool[,] NodeIsWatched;
         [NonSerialized] public Vector2[,] NodePositions;
         [NonSerialized] public Branch[,] VerticalBranches;
-        [NonSerialized] public bool[,] NodeIsWatched;
-        private AudioSource _scareAudioSource;
 
-        public void GerScared()
-        {
-            _scareAudioSource.Play();
-            foreach (var br in HorizontalBranches)
-            {
-                br.ScareBirds();
-            }
-            foreach (var br in VerticalBranches)
-            {
-                br.ScareBirds();
-            }
-        }
-        
         private void Start()
         {
             NodePositions = new Vector2[m, n];
@@ -70,6 +56,13 @@ namespace Grid
                 VerticalBranches[i, j] = branch.GetComponent<VerticalBranch>();
                 VerticalBranches[i, j].SetEdges(NodePositions[i, j], NodePositions[i + 1, j]);
             }
+        }
+
+        public void ScareBirds()
+        {
+            _scareAudioSource.Play();
+            foreach (var br in HorizontalBranches) br.ScareBirds();
+            foreach (var br in VerticalBranches) br.ScareBirds();
         }
     }
 }
