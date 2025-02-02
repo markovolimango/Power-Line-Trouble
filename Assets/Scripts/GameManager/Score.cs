@@ -6,7 +6,7 @@ namespace DefaultNamespace.GameManager
 {
     public class Score: MonoBehaviour
     {
-        [NonSerialized] public int _score = 0;
+        [NonSerialized] public int _score = 100;
         private int _addedScore=0;
         public TMP_Text scoreText;
         public TMP_Text addedScoreText;

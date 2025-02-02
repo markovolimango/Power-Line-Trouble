@@ -69,9 +69,7 @@ namespace Birds
                 if (_pelicanSpawnTimer > 0)
                 {
                     _pelicanSpawnTimer--;
-                    //var i = Random.Range(0, birdPrefabs.Length);
                     i = Random.Range(0, _birdsIndex);
-                    //var i = 0;
                 }
                 else
                 {

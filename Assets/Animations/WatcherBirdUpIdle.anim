@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PelicanLeftIdle
+  m_Name: WatcherBirdUpIdle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 6492696606232182289, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
+      value: {fileID: -3955037300018117558, guid: 2ce1843e02c63a949996f88384dc8a3f, type: 3}
     - time: 0.2
-      value: {fileID: -7855956069682838723, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
+      value: {fileID: -41803491083204215, guid: 2ce1843e02c63a949996f88384dc8a3f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 6492696606232182289, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
-    - {fileID: -7855956069682838723, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
+    - {fileID: -3955037300018117558, guid: 2ce1843e02c63a949996f88384dc8a3f, type: 3}
+    - {fileID: -41803491083204215, guid: 2ce1843e02c63a949996f88384dc8a3f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

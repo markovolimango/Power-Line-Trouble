@@ -4910,12 +4910,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6557696895482232280, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
+  m_Sprite: {fileID: 6492696606232182289, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.225}
+  m_Size: {x: 0.6, y: 0.475}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4943,7 +4943,7 @@ MonoBehaviour:
       m_Calls: []
   Grid: {fileID: 0}
   leftIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
-  rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: a9670ae5911ced2409ddf52fd89361d5, type: 2}
   deathAnimation: {fileID: 7400000, guid: 02216bdb64567424e920ac7096ce8cb6, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: a1ca1d62630541e47a5c76a1d1f9932a, type: 3}

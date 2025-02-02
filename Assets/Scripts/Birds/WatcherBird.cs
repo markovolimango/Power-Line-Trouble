@@ -33,11 +33,15 @@ namespace Birds
             {
                 _laser.SetPosition(0, Grid.NodePositions[1, pos.x]);
                 _laser.SetPosition(1, Grid.NodePositions[Grid.m - 1, pos.x]);
+                print("left");
+                Animator.Play(leftIdleAnimation.name);
             }
             else
             {
                 _laser.SetPosition(0, Grid.NodePositions[Grid.m - 2, pos.x]);
                 _laser.SetPosition(1, Grid.NodePositions[0, pos.x]);
+                print("right");
+                Animator.Play(rightIdleAnimation.name);
             }
 
             _waitTimer = waitTime;

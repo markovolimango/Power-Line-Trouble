@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6557696895482232280, guid: 78286c0ddfc303746a04fbb759e53db9, type: 3}
+  m_Sprite: {fileID: -3705331220025745761, guid: 2ce1843e02c63a949996f88384dc8a3f, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 0.475}
+  m_Size: {x: 0.475, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -111,8 +111,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Grid: {fileID: 0}
-  leftIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
-  rightIdleAnimation: {fileID: 7400000, guid: 19ca3820fdde1f84086c5b2c187e0757, type: 2}
+  leftIdleAnimation: {fileID: 7400000, guid: b1b03a323ac57bf44bad8e6dea11cf60, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: 239f915c5cbf0cf42a2ff1dd3d068e76, type: 2}
   deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: fbf4e38d290d1974b84e065ea2be0247, type: 3}
@@ -127,14 +127,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4820215849620287213}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d34abc05ffcb43609590d62e62517102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
-  pulseSpeed: 5
-  pulseDuration: 20
+  pulseSpeed: 10
+  pulseDuration: 0.3
   pulseInterval: 0.3
 --- !u!95 &506580851068272781
 Animator:
