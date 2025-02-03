@@ -3,6 +3,7 @@ using System.Collections;
 using Grid;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Birds
 {
@@ -21,6 +22,8 @@ namespace Birds
             var emission = megaShitParticles.emission;
             emission.rateOverTime = 0;
             BirdSoundSorce.PlayOneShot(BirdSoundSorce.clip);
+            if (Random.Range(0, 2) == 0) Animator.Play(leftIdleAnimation.name);
+            else Animator.Play(rightIdleAnimation.name);
         }
 
         private void FixedUpdate()

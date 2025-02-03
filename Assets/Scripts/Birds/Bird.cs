@@ -54,6 +54,7 @@ namespace Birds
             ShitTimer = shitTime;
             pos = new Vector2Int(-1, -1);
             MoveBirdToPos(startingPos);
+            
         }
 
         public virtual Vector2Int GetRandomPos()
