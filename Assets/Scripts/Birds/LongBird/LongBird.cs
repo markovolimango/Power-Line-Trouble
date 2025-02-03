@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
@@ -22,9 +23,15 @@ namespace Birds
         private AnimationClip CURR;
         public Vector3 startPos;
         private bool _isLeftJustHit;
+        private bool _isSingleForever;
+        private Rigidbody2D _rb;
+        private bool _spawnStarted;
+        private bool moved;
+        private bool particlesPlayed;
 
         public override void Start()
         {
+            _rb = GetComponent<Rigidbody2D>();
             Animator = GetComponent<Animator>();
             ShitTimer = shitTime;
             Grid = FindFirstObjectByType<GridManager>();
@@ -53,6 +60,34 @@ namespace Birds
             transform.position = startPos;
         }
 
+        private void FixedUpdate()
+        {
+            if (moved) return;
+            transform.position=(_leftLeg.transform.position+_rightLeg.transform.position)/2-new Vector3(0,1.386f,0);
+            if (!particlesPlayed)
+            {
+                particles.Play();
+                particlesPlayed = true;
+                Animator.Play(idleAnimation.name);
+            }
+        }
+
+        IEnumerator MoveToPosition(Vector3 targetPosition, float duration)
+        {
+            Vector3 startPosition = transform.position;
+            float elapsedTime = 0;
+
+            while (elapsedTime < duration)
+            {
+                transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedTime / duration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.position = targetPosition;
+        }
+        
+
         public override void OnScare()
         {
             
@@ -60,7 +95,9 @@ namespace Birds
 
         public void SwapLegs(bool isLeft, bool isSingle)
         {
+            moved = true;
             _isLeftJustHit=isLeft;
+            _isSingleForever = isSingle;
             if (isLeft && isSingle)
             {
                 Animator.Play(rightHalfSwingAnimation.name);
@@ -109,11 +146,11 @@ namespace Birds
             Animator.Play(CURR.name);
             yield return new WaitForSeconds(CURR.length);
             Animator.Play(IDLE.name);
-            if (_isLeftJustHit)
+            if (_isLeftJustHit && !_isSingleForever)
             {
                 transform.position+=Vector3.right;
             }
-            else
+            else if(!_isSingleForever)
             {
                 transform.position+=Vector3.left;
             }
@@ -124,6 +161,13 @@ namespace Birds
             JustDied = true;
             _leftLeg.Die();
             _rightLeg.Die();
+            _rb.gravityScale = 1;
+            StartCoroutine(KillLongBird());
+        }
+
+        private IEnumerator KillLongBird()
+        {
+            yield return new WaitForSeconds(5);
             Destroy(gameObject);
         }
     }

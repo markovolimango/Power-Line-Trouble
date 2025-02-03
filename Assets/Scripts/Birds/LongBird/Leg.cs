@@ -1,6 +1,7 @@
 using System;
 using Grid;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Birds
 {
@@ -18,6 +19,9 @@ namespace Birds
             _longBird = transform.parent.GetComponent<LongBird>();
             base.Start();
             _branches = IsOnHorizontal == 1 ? HorizontalBranches : VerticalBranches;
+            BirdSoundSorce = gameObject.AddComponent<AudioSource>();
+            BirdSoundSorce.clip = birdSounds[Random.Range(0, birdSounds.Count)];
+            //_longBird.SpawnLongBird();
         }
 
         public override void OnScare()
@@ -27,6 +31,7 @@ namespace Birds
         public override void GetHit()
         {
             if (_longBird.JustDied) return;
+            BirdSoundSorce.Play();
             _longBird.ShitTimer = _longBird.shitTime;
             _longBird.birdHit.Invoke();
             TargetPos = pos + 2 * JumpDir;
