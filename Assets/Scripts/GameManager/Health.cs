@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Image = UnityEngine.UI.Image;
 using Slider = UnityEngine.UI.Slider;
 
@@ -8,13 +9,13 @@ namespace DefaultNamespace.GameManager
 {
     public class Health : MonoBehaviour
     {
+        public static int _hp;
         public int maxhp;
         public List<Sprite> sprites;
         public int hpToSpriteChange;
         public Slider Slider;
         public Gradient Gradient;
         public Image Fill;
-        private int _hp;
 
         private SpriteRenderer _spriteRenderer;
         //public RedCornersShaderController redCorners;
@@ -46,7 +47,7 @@ namespace DefaultNamespace.GameManager
 
         private void GameOver()
         {
-            //Destroy(gameObject);
+            SceneManager.LoadScene(2);
         }
 
         public void Heal(int amount)

@@ -6,17 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public ParticleSystem particles;
     public ComboMeter comboMeter;
-    private AudioSource _audioSource;
+    public AudioClip watcherScreamingSound;
     private GridManager _grid;
     private Vector2 _inputDir;
     private bool _isStopped;
     private int _posY, _posX;
+    private AudioSource _scareAudioSource;
 
     private void Start()
     {
         _inputDir = Vector2.zero;
         _grid = FindFirstObjectByType<GridManager>();
-        _audioSource = GetComponent<AudioSource>();
+        _scareAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -48,10 +49,9 @@ public class PlayerMovement : MonoBehaviour
         transform.position = _grid.NodePositions[_posY, _posX];
         if (_grid.NodeIsWatched[_posY, _posX])
         {
-            print("EJ! " + _posY + " " + _posX + " " + _grid.NodeIsWatched[_posY, _posX]);
+            _scareAudioSource.clip = watcherScreamingSound;
+            _scareAudioSource.Play();
             _grid.ScareBirds();
         }
-
-        _audioSource.Play();
     }
 }

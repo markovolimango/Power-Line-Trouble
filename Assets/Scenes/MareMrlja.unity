@@ -2665,6 +2665,18 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   Fill: {fileID: 858782346}
+--- !u!114 &1460781616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460781606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8574bf8fb6b4046739ff27dff0f4a1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1496541425
 GameObject:
   m_ObjectHideFlags: 3
@@ -4271,7 +4283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: orthographic size
-      value: 2.475
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_BackGroundColor.a
@@ -4288,6 +4300,10 @@ PrefabInstance:
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 0.4039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
@@ -4505,6 +4521,14 @@ PrefabInstance:
       value: 0.125
       objectReference: {fileID: 0}
     - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
+      propertyPath: birdsFlyingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2fb9bc7a68968eb43ae26eddde9e443a, type: 3}
+    - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
+      propertyPath: watcherScreamingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f77d4fd4c5f7f240a47372b044476ec, type: 3}
+    - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
       propertyPath: getScared.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -4709,6 +4733,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7133018276122091945, guid: 316401e59c6364581aab0cce1385150b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1460781614}
+    - targetCorrespondingSourceObject: {fileID: 7133018276122091945, guid: 316401e59c6364581aab0cce1385150b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1460781616}
   m_SourcePrefab: {fileID: 100100000, guid: 316401e59c6364581aab0cce1385150b, type: 3}
 --- !u!1001 &8857717407173038544
 PrefabInstance:
@@ -4774,7 +4801,12 @@ PrefabInstance:
       propertyPath: comboMeter
       value: 
       objectReference: {fileID: 1460781614}
-    m_RemovedComponents: []
+    - target: {fileID: 9139612937045895393, guid: 6392da05ab29c4ca4b90aff2a7e791fc, type: 3}
+      propertyPath: watcherScreamingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f77d4fd4c5f7f240a47372b044476ec, type: 3}
+    m_RemovedComponents:
+    - {fileID: 2407038761898973613, guid: 6392da05ab29c4ca4b90aff2a7e791fc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -1,22 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-	private void Start()
-	{
-		gameObject.SetActive(true);
-	}
+    public AudioClip[] birdSounds;
+    public AudioClip fart;
+    private AudioSource _audio;
 
-	public void StartGame()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-	}
+    private void Start()
+    {
+        gameObject.SetActive(true);
+        _audio = GetComponent<AudioSource>();
+    }
 
-	public void QuitGame()
-	{
-		Application.Quit();
-	}
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void OnHover()
+    {
+        _audio.clip = birdSounds[Random.Range(0, birdSounds.Length)];
+        _audio.pitch = Random.Range(0.9f, 1.1f);
+        _audio.Play();
+    }
+
+    public void PlayBigFart()
+    {
+        _audio.clip = fart;
+        _audio.Play();
+    }
 }

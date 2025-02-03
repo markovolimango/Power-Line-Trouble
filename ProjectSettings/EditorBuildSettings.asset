@@ -7,11 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/Mare.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: e970be8705a4c46cfa91ad7138815af6
   - enabled: 1
     path: Assets/Scenes/UgoKamin.unity
     guid: 1094c0a8603619646ada190060cd553e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Fikus.unity
     guid: cd9ed37d127c93d4fb8bf595787c71a2
+  - enabled: 1
+    path: Assets/Scenes/MareMrlja.unity
+    guid: baef674a18b1b4420b6dc00e3e11f895
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 71554b85150d447aba1784208080869f
   m_configObjects: {}

@@ -9,6 +9,7 @@ namespace Grid
         public float distanceX, distanceY, skretanje;
         public GameObject nodePrefab;
         public GameObject horizontalBranchPrefab, verticalBranchPrefab;
+        public AudioClip birdsFlyingSound, watcherScreamingSound;
         private AudioSource _scareAudioSource;
         [NonSerialized] public Branch[,] HorizontalBranches;
         [NonSerialized] public bool[,] NodeIsWatched;
@@ -58,6 +59,7 @@ namespace Grid
 
         public void ScareBirds()
         {
+            _scareAudioSource.clip = birdsFlyingSound;
             _scareAudioSource.Play();
             foreach (var br in HorizontalBranches) br.ScareBirds();
             foreach (var br in VerticalBranches) br.ScareBirds();
