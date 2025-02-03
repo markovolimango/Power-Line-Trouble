@@ -6,7 +6,6 @@ using Birds;
 using DefaultNamespace.GameManager;
 using Shaders;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Grid
 {
@@ -14,14 +13,15 @@ namespace Grid
     {
         public float spaceBetweenBirds;
         public Sprite[] sprites;
+        public Score Score;
+        public ComboMeter comboMeter;
+        private camer _camer;
         private Transform _electricity;
         private int _spriteIndex;
         private SpriteRenderer _spriteRenderer, _electricitySpriteRenderer;
         [NonSerialized] protected List<Bird> Birds = new();
         protected PulseShaderController PulseShaderController;
         [NonSerialized] public Vector2 StartPos, MidPos, EndPos;
-        public Score Score;
-        public ComboMeter comboMeter;
 
         private void Start()
         {
@@ -30,8 +30,9 @@ namespace Grid
             _electricitySpriteRenderer = _electricity.GetComponent<SpriteRenderer>();
             _electricity = transform.Find("Electricity");
             _electricity.gameObject.SetActive(false);
-            Score=GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
-            comboMeter=GameObject.FindGameObjectWithTag("Car").GetComponent<ComboMeter>();
+            Score = GameObject.FindGameObjectWithTag("Car").GetComponent<Score>();
+            comboMeter = GameObject.FindGameObjectWithTag("Car").GetComponent<ComboMeter>();
+            _camer = FindFirstObjectByType<camer>();
         }
 
         private void FixedUpdate()
@@ -82,11 +83,12 @@ namespace Grid
         public void KillBirds(bool leftToRight, float speed)
         {
             //print("KILLING");
+            _camer.ShakeIt(Birds.Count * 0.5f, 0.1f);
             StartCoroutine(Electrify());
             PulseShaderController.Pulse(3);
-            int scoreToAdd = 0;
+            var scoreToAdd = 0;
             foreach (var bird in Birds.ToList()) scoreToAdd += bird.scoreIncrease;
-            Score.AddScore((scoreToAdd+comboMeter.Combo)*Birds.Count);
+            Score.AddScore((scoreToAdd + comboMeter.Combo) * Birds.Count);
             foreach (var bird in Birds.ToList()) bird.GetHit();
         }
 
