@@ -16,6 +16,7 @@ namespace Birds
 
         public override void Start()
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -2);
             IsOnHorizontal = 0;
             base.Start();
             if (goingLeft) Animator.Play(leftIdleAnimation.name);

@@ -10,6 +10,7 @@ namespace Birds
 
         public override void Start()
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             _laser = transform.GetChild(0).GetComponent<LineRenderer>();
             pos.y = Random.Range(0, 2) * (Grid.m - 2);
             print(pos);

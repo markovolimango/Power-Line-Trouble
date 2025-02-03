@@ -25,6 +25,7 @@ namespace Birds
         public List<AudioClip> birdSounds = new();
         public AudioClip explosionSound;
         public ParticleSystem particles;
+        public int scoreIncrease;
         protected PulseShaderController _pulseShaderController;
         protected Animator Animator;
         protected AudioSource BirdSoundSorce;
@@ -33,10 +34,9 @@ namespace Birds
         protected Branch[,] HorizontalBranches;
         [NonSerialized] public int IsOnHorizontal = -1; //-1 - not set, 0 - vertical, 1 - horizontal
         [NonSerialized] public bool JustDied;
+        protected Score Score;
         protected internal int ShitTimer;
         protected Branch[,] VerticalBranches;
-        public int scoreIncrease;
-        protected Score Score;
 
         public virtual void Start()
         {
@@ -100,13 +100,13 @@ namespace Birds
             {
                 if (pos != new Vector2Int(-1, -1)) HorizontalBranches[pos.y, pos.x].DetachBird(this);
                 HorizontalBranches[newPos.y, newPos.x].AttachBird(this);
-                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
             else if (IsOnHorizontal == 0)
             {
                 if (pos != new Vector2Int(-1, -1)) VerticalBranches[pos.y, pos.x].DetachBird(this);
                 VerticalBranches[newPos.y, newPos.x].AttachBird(this);
-                transform.position = new Vector3(transform.position.x, transform.position.y, Grid.m - pos.y - 0.5f);
+                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
 
             pos = newPos;
