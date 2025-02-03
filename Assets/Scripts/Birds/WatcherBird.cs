@@ -12,7 +12,7 @@ namespace Birds
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             _laser = transform.GetChild(0).GetComponent<LineRenderer>();
-            pos.y = Random.Range(0, 2) * (Grid.m - 2);
+            pos.y = 0;
             print(pos);
             MarkNodesAs(true);
             IsOnHorizontal = 0;
@@ -29,21 +29,12 @@ namespace Birds
             base.MoveBirdToPos(newPos);
 
             MarkNodesAs(true);
+            _laser.transform.position =
+                new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
             _laser.enabled = true;
-            if (pos.y == 0)
-            {
-                _laser.SetPosition(0, Grid.VerticalBranches[0, pos.x].MidPos);
-                _laser.SetPosition(1, Grid.NodePositions[Grid.m - 1, pos.x]);
-                print("left");
-                Animator.Play(leftIdleAnimation.name);
-            }
-            else
-            {
-                _laser.SetPosition(0, Grid.VerticalBranches[Grid.m - 2, pos.x].MidPos);
-                _laser.SetPosition(1, Grid.NodePositions[0, pos.x]);
-                print("right");
-                Animator.Play(rightIdleAnimation.name);
-            }
+            _laser.SetPosition(0, Grid.NodePositions[1, pos.x]);
+            _laser.SetPosition(1, Grid.NodePositions[Grid.m - 1, pos.x]);
+            Animator.Play(leftIdleAnimation.name);
 
             _waitTimer = waitTime;
         }
@@ -51,8 +42,13 @@ namespace Birds
         public override void OnScare()
         {
             particles.Play();
-            var newPos = GetRandomPos();
-            newPos.y = Random.Range(0, 2) * (Grid.m - 2);
+            var newPos = pos;
+            while (newPos == pos)
+            {
+                newPos = GetRandomPos();
+                newPos.y = 0;
+            }
+
             MoveBirdToPos(newPos);
         }
 
@@ -78,18 +74,7 @@ namespace Birds
 
         private void MarkNodesAs(bool isWatched)
         {
-            if (pos.y == 0)
-                for (var i = 1; i < Grid.m; i++)
-                {
-                    Grid.NodeIsWatched[i, pos.x] = isWatched;
-                    print(i + " " + pos.x + " " + Grid.NodeIsWatched[i, pos.x]);
-                }
-            else
-                for (var i = 0; i < Grid.m - 1; i++)
-                {
-                    Grid.NodeIsWatched[i, pos.x] = isWatched;
-                    print(i + " " + pos.x + " " + Grid.NodeIsWatched[i, pos.x]);
-                }
+            for (var i = 1; i < Grid.m; i++) Grid.NodeIsWatched[i, pos.x] = isWatched;
         }
     }
 }

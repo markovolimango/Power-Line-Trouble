@@ -4314,7 +4314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: orthographic size
-      value: 2.25
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_BackGroundColor.a
@@ -4333,12 +4333,16 @@ PrefabInstance:
       value: 0.4039216
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0.00052083336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 1.06875
       objectReference: {fileID: 0}
     - target: {fileID: 2439401314036614933, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 1.2222222
       objectReference: {fileID: 0}
     - target: {fileID: 4937597498726362095, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_Name
@@ -4347,6 +4351,10 @@ PrefabInstance:
     - target: {fileID: 8966673413917216034, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_AssetsPPU
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8966673413917216034, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
+      propertyPath: m_CropFrame
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8966673413917216034, guid: 0f6f84d87158e4e4b8f20b1c723141d2, type: 3}
       propertyPath: m_GridSnapping
@@ -4552,6 +4560,14 @@ PrefabInstance:
       propertyPath: skretanje
       value: 0.125
       objectReference: {fileID: 0}
+    - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
+      propertyPath: birdsFlyingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: be1d9150320df4b83a97f55cc43cfc99, type: 3}
+    - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
+      propertyPath: watcherScreamingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: be1d9150320df4b83a97f55cc43cfc99, type: 3}
     - target: {fileID: 6438990931569137915, guid: 1ff5a0a098f06b9459ce75f2dcb45a6e, type: 3}
       propertyPath: getScared.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
