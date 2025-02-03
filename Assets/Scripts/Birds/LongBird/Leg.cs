@@ -44,7 +44,9 @@ namespace Birds
                 return;
             }
 
-            MoveBirdToPos(TargetPos);
+            _branches[pos.y, pos.x].DetachBird(this);
+            pos = TargetPos;
+            _branches[pos.y, pos.x].AttachBird(this);
             _longBird.SwapLegs(_isLeft,false);
         }
 
