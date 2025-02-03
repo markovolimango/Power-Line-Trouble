@@ -13,6 +13,7 @@ namespace Birds
 
         public override void Start()
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 1);
             _longBird = transform.parent.GetComponent<LongBird>();
             base.Start();
             _branches = IsOnHorizontal == 1 ? HorizontalBranches : VerticalBranches;
@@ -20,9 +21,8 @@ namespace Birds
 
         public override void OnScare()
         {
-            
         }
-        
+
         public override void GetHit()
         {
             if (_longBird.JustDied) return;

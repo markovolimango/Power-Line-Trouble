@@ -14,6 +14,7 @@ namespace Birds
 
         public override void Start()
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -5);
             _camer = FindFirstObjectByType<camer>();
             base.Start();
             var emission = megaShitParticles.emission;
