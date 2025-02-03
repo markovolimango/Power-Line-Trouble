@@ -16,7 +16,7 @@ namespace DefaultNamespace.GameManager
         private void Start()
         {
             _player = GameObject.FindGameObjectWithTag("Player");
-            comboText.text = "";
+            comboText.text = "0";
             _loseTimer = 0;
         }
 
@@ -28,7 +28,7 @@ namespace DefaultNamespace.GameManager
                 return;
             }
 
-            comboText.text = "";
+            comboText.text = "0";
             Combo = 0;
         }
 

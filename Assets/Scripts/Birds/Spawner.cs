@@ -44,8 +44,8 @@ namespace Birds
 
         public void OnTsk()
         {
-            int i=0;
-            if(_scoreScript._score >= scoreLvl[_currentLvl])
+            int i = 0;
+           if(_scoreScript._score >= scoreLvl[_currentLvl])
             {
                 _currentLvl++;
                 spawnTime = spawnTimeLvl[_currentLvl];

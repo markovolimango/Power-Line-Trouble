@@ -53,9 +53,8 @@ namespace Birds
             var startingPos = pos;
             ShitTimer = shitTime;
             pos = new Vector2Int(-1, -1);
-            if (Random.Range(0, 2) == 0) Animator.Play(leftIdleAnimation.name);
-            else Animator.Play(rightIdleAnimation.name);
             MoveBirdToPos(startingPos);
+            
         }
 
         public virtual Vector2Int GetRandomPos()

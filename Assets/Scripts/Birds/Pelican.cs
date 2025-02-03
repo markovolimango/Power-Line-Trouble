@@ -12,6 +12,7 @@ namespace Birds
         private Health _carHealth;
         private Vector2Int _jumpDir;
         private bool goingLeft;
+        private bool isSpawned = false;
 
         public override void Start()
         {
@@ -20,6 +21,7 @@ namespace Birds
             base.Start();
             if (goingLeft) Animator.Play(leftIdleAnimation.name);
             else Animator.Play(rightIdleAnimation.name);
+            isSpawned = true;
             water.Play();
         }
 
@@ -37,18 +39,36 @@ namespace Birds
 
         public override Vector2Int GetRandomPos()
         {
-            if (Random.Range(0, 2) == 0)
+            if (!isSpawned)
             {
-                print("left");
-                _jumpDir = Vector2Int.left;
-                goingLeft = true;
-                return new Vector2Int(Grid.n - 1, Random.Range(0, Grid.m - 1));
-            }
+                if (Random.Range(0, 2) == 0)
+                {
+                    print("left");
+                    _jumpDir = Vector2Int.left;
+                    goingLeft = true;
+                    return new Vector2Int(Grid.n - 1, Random.Range(0, Grid.m - 1));
+                }
 
-            print("right");
-            _jumpDir = Vector2Int.right;
-            goingLeft = false;
-            return new Vector2Int(0, Random.Range(0, Grid.m - 1));
+                print("right");
+                _jumpDir = Vector2Int.right;
+                goingLeft = false;
+                return new Vector2Int(0, Random.Range(0, Grid.m - 1));
+            }
+            else
+            {
+                if (goingLeft)
+                {
+                    print("left");
+                    _jumpDir = Vector2Int.left;
+                    goingLeft = true;
+                    return new Vector2Int(Grid.n - 1, Random.Range(0, Grid.m - 1));
+                }
+
+                print("right");
+                _jumpDir = Vector2Int.right;
+                goingLeft = false;
+                return new Vector2Int(0, Random.Range(0, Grid.m - 1));
+            }
         }
 
         public override void OnTsk()

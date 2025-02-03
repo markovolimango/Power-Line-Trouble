@@ -1,6 +1,7 @@
 using System;
 using Grid;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Birds
 {
@@ -10,6 +11,7 @@ namespace Birds
         private LongBird _longBird;
         [NonSerialized] public Vector2Int JumpDir;
         [NonSerialized] public Vector2Int TargetPos;
+        [NonSerialized] public bool _isLeft;
 
         public override void Start()
         {
@@ -17,6 +19,9 @@ namespace Birds
             _longBird = transform.parent.GetComponent<LongBird>();
             base.Start();
             _branches = IsOnHorizontal == 1 ? HorizontalBranches : VerticalBranches;
+            BirdSoundSorce = gameObject.AddComponent<AudioSource>();
+            BirdSoundSorce.clip = birdSounds[Random.Range(0, birdSounds.Count)];
+            //_longBird.SpawnLongBird();
         }
 
         public override void OnScare()
@@ -26,6 +31,7 @@ namespace Birds
         public override void GetHit()
         {
             if (_longBird.JustDied) return;
+            BirdSoundSorce.Play();
             _longBird.ShitTimer = _longBird.shitTime;
             _longBird.birdHit.Invoke();
             TargetPos = pos + 2 * JumpDir;
@@ -38,15 +44,15 @@ namespace Birds
                     _longBird.Die();
                     return;
                 }
-
                 _branches[pos.y, pos.x].DetachBird(this);
-                transform.position += Vector3.down + Vector3.right * JumpDir.x;
-                _longBird.SwapLegs();
+                _longBird.SwapLegs(_isLeft,true);
                 return;
             }
 
-            MoveBirdToPos(TargetPos);
-            _longBird.SwapLegs();
+            _branches[pos.y, pos.x].DetachBird(this);
+            pos = TargetPos;
+            _branches[pos.y, pos.x].AttachBird(this);
+            _longBird.SwapLegs(_isLeft,false);
         }
 
         public override void Die()
