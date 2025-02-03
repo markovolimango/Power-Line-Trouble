@@ -54,36 +54,33 @@ namespace Birds
         {
             
         }
-        private void FixedUpdate()//ovo treba da se menja nesto
-        {
-            if (JustDied) return;
-        }
 
         public void SwapLegs(bool isLeft, bool isSingle)
         {
             if (isLeft && isSingle)
             {
-                
-                transform.position += Vector3.right;
+                //transform.position += Vector3.right;
                 Animator.Play(rightHalfSwingAnimation.name);
                 CURR=rightHalfSwingAnimation;
                 IDLE=rightIdleAnimationLB;
             }
             else if(!isLeft && isSingle)
             {
+                transform.position += Vector3.left;
                 Animator.Play(leftHalfSwingAnimation.name);
                 CURR=leftHalfSwingAnimation;
                 IDLE=leftIdleAnimationLB;
             }
             else if (isLeft)
             {
-                transform.position += Vector3.right;
+                //transform.position += Vector3.right;
                 Animator.Play(rightSwingAnimation.name);
                 CURR=rightSwingAnimation;
                 IDLE = idleAnimation;
             }
             else
             {
+                transform.position += Vector3.left;
                 Animator.Play(leftSwingAnimation.name);
                 CURR=leftSwingAnimation;
                 IDLE = idleAnimation;
@@ -100,7 +97,6 @@ namespace Birds
             _rightLeg._isLeft = false;
             print(transform.position);
             transform.position = (_leftLeg.transform.position + _rightLeg.transform.position) / 2;
-            if(isLeft) transform.position += Vector3.left;
             print(transform.position);
         }
 

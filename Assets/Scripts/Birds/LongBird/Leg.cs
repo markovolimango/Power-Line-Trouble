@@ -39,9 +39,7 @@ namespace Birds
                     _longBird.Die();
                     return;
                 }
-
                 _branches[pos.y, pos.x].DetachBird(this);
-                transform.position += Vector3.down + Vector3.right * JumpDir.x;
                 _longBird.SwapLegs(_isLeft,true);
                 return;
             }
