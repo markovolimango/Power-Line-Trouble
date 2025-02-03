@@ -165,8 +165,8 @@ Transform:
   m_GameObject: {fileID: 4625518605915070432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2564926, y: 0.64765227, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -1.16, y: 0.534, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 956137884326416954}
@@ -214,7 +214,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -3675648630587014315, guid: a1926f3e0c66bc14cb8241d7fda579fa, type: 3}
   m_Color: {r: 0, g: 0.75355816, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,14 +246,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Grid: {fileID: 0}
-  leftIdleAnimation: {fileID: 8315261401881103022, guid: 6241dba45d01a48aca00ba37151988b0, type: 3}
-  rightIdleAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
-  deathAnimation: {fileID: 7400000, guid: f8519120317aea04099392cc34b5a77f, type: 2}
+  leftIdleAnimation: {fileID: 7400000, guid: 02216bdb64567424e920ac7096ce8cb6, type: 2}
+  rightIdleAnimation: {fileID: 7400000, guid: 02216bdb64567424e920ac7096ce8cb6, type: 2}
+  deathAnimation: {fileID: 7400000, guid: 0b921ef4cabd519428d8ec6309f01827, type: 2}
   birdSounds:
   - {fileID: 8300000, guid: b311cf977130a5b459bacdad6d8504b2, type: 3}
   explosionSound: {fileID: 8300000, guid: 24ea71c04fb1b8c4f8701de7d710af4f, type: 3}
   particles: {fileID: 0}
   scoreIncrease: 0
+  idleAnimation: {fileID: 7400000, guid: 583efb8224a89bf42a313f83a432dd62, type: 2}
+  leftIdleAnimationLB: {fileID: 7400000, guid: c058f1f407d2ff34fa3718f07e50736a, type: 2}
+  rightIdleAnimationLB: {fileID: 7400000, guid: c9b4b717f9e1782408aff6742ac9c668, type: 2}
+  leftSwingAnimation: {fileID: 7400000, guid: 3055eb8e43378d0439ea3283dad32e64, type: 2}
+  rightSwingAnimation: {fileID: 7400000, guid: b8a5def224badb8488ba5073f9622f9c, type: 2}
+  leftHalfSwingAnimation: {fileID: 7400000, guid: f9f09381220cdd84e96f7bb6a4364e8e, type: 2}
+  rightHalfSwingAnimation: {fileID: 7400000, guid: 1280c6f9a3308c74aa4ff5b43d4ca709, type: 2}
 --- !u!95 &8668982076249371037
 Animator:
   serializedVersion: 5

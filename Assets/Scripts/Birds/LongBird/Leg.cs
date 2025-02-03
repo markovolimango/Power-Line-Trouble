@@ -10,6 +10,7 @@ namespace Birds
         private LongBird _longBird;
         [NonSerialized] public Vector2Int JumpDir;
         [NonSerialized] public Vector2Int TargetPos;
+        [NonSerialized] public bool _isLeft;
 
         public override void Start()
         {
@@ -41,12 +42,12 @@ namespace Birds
 
                 _branches[pos.y, pos.x].DetachBird(this);
                 transform.position += Vector3.down + Vector3.right * JumpDir.x;
-                _longBird.SwapLegs();
+                _longBird.SwapLegs(_isLeft,true);
                 return;
             }
 
             MoveBirdToPos(TargetPos);
-            _longBird.SwapLegs();
+            _longBird.SwapLegs(_isLeft,false);
         }
 
         public override void Die()

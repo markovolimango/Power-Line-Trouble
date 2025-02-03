@@ -44,8 +44,8 @@ namespace Birds
 
         public void OnTsk()
         {
-            int i=0;
-            if(_scoreScript._score >= scoreLvl[_currentLvl])
+            /*/  int i=0;
+           if(_scoreScript._score >= scoreLvl[_currentLvl])
             {
                 _currentLvl++;
                 spawnTime = spawnTimeLvl[_currentLvl];
@@ -76,6 +76,12 @@ namespace Birds
                     i = 9;
                     _pelicanSpawnTimer = Random.Range(_pelicanSpawnTime, _pelicanSpawnTime + 2);
                 }
+            }/*/
+            var i = 6;
+            if (_spawnTimer > 0)
+            {
+                _spawnTimer--;
+                return;
             }
             var birdObject = Instantiate(birdPrefabs[i], transform);
             var bird = birdObject.GetComponent<Bird>();
@@ -86,7 +92,7 @@ namespace Birds
             bird.birdHit.AddListener(_combo.OnBirdHit);
             bird.pos = spawnPos;
 
-            _spawnTimer = spawnTime;
+            _spawnTimer = spawnTime+1000;
         }
     }
 }
